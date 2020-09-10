@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
 // CSS styles
-import "./search-bar.css"
+import "./search-bar.css";
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -39,17 +39,16 @@ class SearchBar extends React.Component {
             <Container fluid className="p-3 text-center text-dark">
                 <h1 className="display-4 font-weight-lighter">Acme Search</h1>
                 <Form 
-                    className="d-flex"
-                    style={{maxHeight: "2.3rem"}} 
+                    className={"mx-auto d-flex border rounded-pill" + (this.state.hover ? " shadow": "")}
                     onSubmit={this.onFormSubmit}
                  >
                     <Form.Group
-                        className={"flex-fill mx-3" + (this.state.hover ? " shadow": "")}
+                        className="flex-fill mx-3"
                         onMouseEnter={this.onHover}
                         onMouseLeave={this.onHover}
                     >
                         <Form.Control
-                            className="w-100"
+                            className="w-100 border-0"
                             type="text"
                             name="search"
                             placeholder="Search away..."
@@ -58,7 +57,7 @@ class SearchBar extends React.Component {
                         >
                         </Form.Control>
                     </Form.Group>
-                    <Button type="submit" variant="outline-info">Search</Button>
+                    <Button className="rounded-pill" type="submit" variant="outline-info">Search</Button>
                 </Form>
             </Container>
         );
