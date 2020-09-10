@@ -5,6 +5,9 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
+// CSS styles
+import "./search-bar.css"
+
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -20,6 +23,7 @@ class SearchBar extends React.Component {
     // TODO: Implement
     onFormSubmit(e) {
         e.preventDefault();
+        this.props.onSearch(this.state.search);
     }
 
     onChange(e) {
@@ -34,9 +38,13 @@ class SearchBar extends React.Component {
         return (
             <Container fluid className="p-3 text-center text-dark">
                 <h1 className="display-4 font-weight-lighter">Acme Search</h1>
-                <Form className="d-flex" style={{maxHeight: "2.3rem"}}>
+                <Form 
+                    className="d-flex"
+                    style={{maxHeight: "2.3rem"}} 
+                    onSubmit={this.onFormSubmit}
+                 >
                     <Form.Group
-                        className={"flex-fill mx-3" + (this.state.hover ? " shadow-sm": "")}
+                        className={"flex-fill mx-3" + (this.state.hover ? " shadow": "")}
                         onMouseEnter={this.onHover}
                         onMouseLeave={this.onHover}
                     >
@@ -56,5 +64,7 @@ class SearchBar extends React.Component {
         );
     }
 };
+
+// TODO: Add propTypes
 
 export default SearchBar;
