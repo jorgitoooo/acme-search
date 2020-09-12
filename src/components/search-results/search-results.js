@@ -1,32 +1,56 @@
 import React, { useEffect, useState } from "react";
+import CalendarList from "../calendar-list";
+import ContactList from "../contact-list";
 
-function SearchResults({ query }) {
-    const [results, setResults] = useState([]);
+// Services
+import services from "../../services";
+
+// CSS styles
+import "./search-resutls.css";
+
+function SearchResults({ query, ...props }) {
+    const [results, setResults] = useState(null);
 
     useEffect(() => {
-        // TODO:
-        // 1. Access data and filter it based on query
-        // 2. Update `results`
+        if (query || Object.is({}, query)) {
+            const calendarFiltered = services.calendar.getMatching(query);
+            const contactsFiltered = services.contact.getMatching(query);
+            const dropboxFiltered = services.dropbox.getMatching(query);
+            const slackFiltered = services.slack.getMatching(query);
+            const tweetFiltered = services.tweet.getMatching(query);
 
-        // DEV
-        console.log("useEffect");
-        if (query) {
-            setResults([query]);
-        } else {
-            setResults([]);
+            setResults({
+                calendar: calendarFiltered,
+                contacts: contactsFiltered,
+                dropbox: dropboxFiltered,
+                slack: slackFiltered,
+                tweet: tweetFiltered,
+            });
         }
-
     }, [query]);
 
-    if (results.length) {
-        const resList = results.map((res, idx) => <li key={idx}>{res}</li>);
+    if (results) {
+        // DEV
+        const calendarList = results.calendar.map((res, idx) => <li key={idx}>calendar: {res.title}</li>);
+        const contactList = results.contacts.map((res, idx) => <li key={idx}>contact: {res.name}</li>);
+        const dropboxList = results.dropbox.map((res, idx) => <li key={idx}>dropbox: {res.title}</li>);
+        const slackList = results.slack.map((res, idx) => <li key={idx}>slack: {res.author}</li>);
+        const tweetList = results.tweet.map((res, idx) => <li key={idx}>tweet: {res.user}</li>);
         return (
-            <ul>
-                {resList}
-            </ul>
+            <section className="results mx-auto text-center" {...props}>
+                <CalendarList calendar={results.calendar} />
+                <ContactList contacts={results.contacts} />
+
+                { calendarList }
+                { contactList }
+                { dropboxList }
+                { slackList }
+                { tweetList }
+            </section>
         );
     } else {
-        return <p> No Results...</p>
+        return null;
+        // return <p {...props} >No results...</p>
     }
 }
 
