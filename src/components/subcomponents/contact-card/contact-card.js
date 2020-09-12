@@ -7,6 +7,8 @@ import PhoneInfo from "../phone-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";
+import CardHeading from "../../styled-components/card-heading";
+import CardSubHeading from "../../styled-components/card-subheading";
 
 /**
     "name": "John Doe",
@@ -26,8 +28,8 @@ function ContactCard({name, company, emails, phones, lastContact, ...props}) {
     return (
         <Card { ...props } className="shadow" bg="white">
             <Card.Body>
-                <h4 className="font-weight-bold">{name}</h4>
-                {company && <h5 className="text-muted mb-0">{company}</h5>}
+                <CardHeading heading={name} />
+                {company && <CardSubHeading heading={company} />}
                 {emails && <EmailInfo emails={emails} />}
                 {phones && <PhoneInfo phones={phones} />}
             </Card.Body>

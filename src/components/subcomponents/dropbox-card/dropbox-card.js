@@ -2,29 +2,19 @@ import React from "react";
 
 // Subcomponents
 import DateInfo from "../date-info";
+import PathInfo from "../path-info";
 import SharedWithInfo from "../shared-with-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";
-import Image from "react-bootstrap/Image";
-
-// SVG icons
-import fileIcon from "../../../assets/file.svg";
+import CardHeading from "../../styled-components/card-heading";
 
 function DropboxCard({title, path, sharedWith, created, ...props}) {
     return (
         <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
-                <h4 className="font-weight-bold">{title}</h4>
-                { path && (
-                    <div>
-                        <div className="d-flex justify-content-center align-items-center mb-2">
-                            <Image src={fileIcon} width={20}/>
-                            <h5 className="font-weight-bold mb-0 ml-1">Path</h5>
-                        </div>
-                        <p className="text-muted mb-0">{path}</p>
-                    </div>
-                )}
+                <CardHeading heading={title}/>
+                { path && <PathInfo path={path} /> }
                 { sharedWith && <SharedWithInfo emails={sharedWith} />}
             </Card.Body>
             <Card.Footer className="bg-white">{created && <DateInfo title={"Created"} date={created} />}</Card.Footer>
