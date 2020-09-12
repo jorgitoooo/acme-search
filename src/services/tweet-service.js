@@ -1,4 +1,9 @@
 import queryService from "./query-service";
+
+// Utilities
+import utils from "../utils";
+
+// Data
 import data from "../data/tweet.json";
 
 /** 
@@ -12,8 +17,8 @@ import data from "../data/tweet.json";
     ]
 */
 class TweetService {
-    constructor() {
-        this.tweets = data.tweet || [];
+    constructor(tweets) {
+        this.tweets = tweets || [];
     }
     getMatching(query) {
         let filtered = [];
@@ -21,9 +26,22 @@ class TweetService {
             filtered = this.tweets.filter(twt => (
                 queryService.queryMatch(twt, query)
             ));
+
+            filtered = this.normalize(filtered);
         }
+
         return filtered;
+    }
+
+    normalize(tweets) {
+        return tweets.map(tweet => {
+            return {
+                user: String(tweet.user).replace("@", ""),
+                message: String(tweet.message),
+                createdAt: utils.date.createDateStr(new Date(tweet.timestamp)),
+            };
+        });
     }
 }
 
-export default new TweetService();
+export default new TweetService(data.tweet);
