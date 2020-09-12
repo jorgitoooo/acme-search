@@ -9,7 +9,7 @@ import Card from "react-bootstrap/Card";
 
 function CalendarCard({title, invitees, date, ...props}) {
     return (
-        <Card { ...props } className="shadow-sm calendar-card" bg="white">
+        <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
                 <h4 className="font-weight-bold">{title}</h4>
                 {date && <DateInfo date={date} />}

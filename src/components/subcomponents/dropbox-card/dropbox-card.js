@@ -13,7 +13,7 @@ import fileIcon from "../../../assets/file.svg";
 
 function DropboxCard({title, path, sharedWith, created, ...props}) {
     return (
-        <Card { ...props } className="shadow-sm calendar-card" bg="white">
+        <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
                 <h4 className="font-weight-bold">{title}</h4>
                 { path && (
