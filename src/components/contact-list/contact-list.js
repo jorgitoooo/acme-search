@@ -4,9 +4,12 @@ import ContactCard from "../subcomponents/contact-card";
 // Styled components
 import ListGroup from "react-bootstrap/ListGroup";
 
+// Wrapper components
+import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
+
 function ContactList({ contacts }) {
-    if (Array.isArray(contacts) && contacts.length > 0) {
-        return (
+    return (
+        <ArrayConditionalWrapper array={contacts}>
             <section className="py-3">
                 <h1 className="font-weight-bold">Contacts</h1>
                 <ListGroup as="ul">
@@ -25,10 +28,8 @@ function ContactList({ contacts }) {
                     ))}
                 </ListGroup>
             </section>
-        );
-    } else {
-        return null;
-    }
+        </ArrayConditionalWrapper>
+    );
 }
 
 export default ContactList;

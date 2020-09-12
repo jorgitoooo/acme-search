@@ -4,11 +4,13 @@ import CalendarCard from "../subcomponents/calendar-card";
 // Styled components
 import ListGroup from "react-bootstrap/ListGroup";
 
+// Wrapper components
+import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
+
 function CalendarList({ calendar }) {
-    if (Array.isArray(calendar) && calendar.length > 0) {
-        return (
-            <>
-                <h1 className="font-weight-bold">Calendar</h1>
+    return (
+        <ArrayConditionalWrapper array={calendar}>
+            <h1 className="font-weight-bold">Calendar</h1>
                 <ListGroup as="ul">
                     {calendar && (
                         calendar.map( (event, idx) => (
@@ -22,11 +24,8 @@ function CalendarList({ calendar }) {
                         )
                     ))}
                 </ListGroup>
-            </>
-        );
-    } else {
-        return null;
-    }
+        </ArrayConditionalWrapper>
+    );
 }
 
 export default CalendarList;
