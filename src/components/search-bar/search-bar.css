@@ -1,9 +1,16 @@
 form {
     max-height: 2.3rem !important;
     max-width: 960px !important;
+    box-sizing: none !important;
 }
+
+/* form:active {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+} */
 
 .form-control, .form-control:focus {
     background-color: transparent !important;
     border-color: transparent !important;
+    box-shadow: none !important;
+    box-sizing: none !important;
 }

@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
 // Services
-import queryService from "../../services";
+import services from "../../services";
 
 // CSS styles
 import "./search-bar.css";
@@ -26,29 +26,17 @@ class SearchBar extends React.Component {
     // TODO: Implement
     onFormSubmit(e) {
         e.preventDefault();
-        
         const { query } = this.state;
-        const { onSearch } = this.props;
-
-        // A query should not take place if the search is
-        // an empty string or whitespace.
-        // if (!search || search.trim().length === 0) {
-        //     this.props.onSearch(null);
-        //     return;
-        // }
-
-        // const queryTerms = search.trim().split(" ");
-        // const lowercaseQueryTerms = queryTerms.map(term => term.toLocaleLowerCase());
-        
-        onSearch( queryService.prepareQuery(query) );
+        this.props.onSearch( services.query.prepareQuery(query) );
+        this.setState({ query: "" });
     }
 
     onChange(e) {
-        this.setState( { [e.target.name]: e.target.value });
+        this.setState( { [e.target.name]: e.target.value } );
     }
     
-    onHover(e) {
-        this.setState( prevState => ({ hover: !prevState.hover }));
+    onHover() {
+        this.setState( prevState => ({ hover: !prevState.hover }) );
     }
 
     render() {
@@ -68,7 +56,6 @@ class SearchBar extends React.Component {
                             className="w-100 border-0"
                             type="text"
                             name="query"
-                            placeholder="Search away..."
                             onChange={this.onChange}
                             value={this.state.query}
                         >
