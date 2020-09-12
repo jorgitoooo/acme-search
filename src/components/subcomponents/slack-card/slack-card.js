@@ -7,6 +7,7 @@ import DateInfo from "../date-info";
 // Styled components
 import Card from "react-bootstrap/Card";
 import CardInfo from "../../styled-components/card-info";
+import CardHeading from "../../styled-components/card-heading";
 
 // SVG icons
 import slackHashIcon from "../../../assets/slack-hash.svg";
@@ -16,7 +17,7 @@ function SlackCard( { channel, author, message, createdAt, ...props } ) {
     return (
         <Card className="shadow calendar-card" bg="white" { ...props }>
             <Card.Body>
-                <h3 className="font-weight-bold">{author}</h3>
+                <CardHeading heading={author} />
                 <CardInfo 
                     iconSrc={slackHashIcon}
                     heading={"Channel"}
