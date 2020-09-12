@@ -3,6 +3,9 @@ import CalendarCard from "../subcomponents/calendar-card";
 
 // Styled components
 import ListGroup from "react-bootstrap/ListGroup";
+import ListContainer from "../styled-components/list-container";
+import ListHeading from "../styled-components/list-heading";
+
 
 // Wrapper components
 import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
@@ -10,20 +13,21 @@ import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
 function CalendarList({ calendar }) {
     return (
         <ArrayConditionalWrapper array={calendar}>
-            <h1 className="font-weight-bold">Calendar</h1>
+            <ListContainer>
+                <ListHeading heading={"Calendar"} />
                 <ListGroup as="ul">
-                    {calendar && (
-                        calendar.map( (event, idx) => (
-                                <ListGroup.Item as="li" key={idx}>
-                                    <CalendarCard 
-                                        title={event.title}
-                                        invitees={event.invitees}
-                                        date={event.date}
-                                    />
-                                </ListGroup.Item>
+                    {calendar.map( (event, idx) => (
+                            <ListGroup.Item as="li" key={idx}>
+                                <CalendarCard 
+                                    title={event.title}
+                                    invitees={event.invitees}
+                                    date={event.date}
+                                />
+                            </ListGroup.Item>
                         )
-                    ))}
+                    )}
                 </ListGroup>
+            </ListContainer>
         </ArrayConditionalWrapper>
     );
 }

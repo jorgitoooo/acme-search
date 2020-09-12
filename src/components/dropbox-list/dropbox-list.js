@@ -3,6 +3,8 @@ import DropboxCard from "../subcomponents/dropbox-card";
 
 // Styled components
 import ListGroup from "react-bootstrap/ListGroup";
+import ListContainer from "../styled-components/list-container";
+import ListHeading from "../styled-components/list-heading";
 
 // Wrapper components
 import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
@@ -10,10 +12,10 @@ import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
 function DropboxList({ documents }) {
     return (
         <ArrayConditionalWrapper array={documents}>
-            <h1 className="font-weight-bold">Dropbox</h1>
-            <ListGroup as="ul">
-                {documents && (
-                    documents.map( (document, idx) => (
+            <ListContainer>
+            <ListHeading heading={"Dropbox"} />
+                <ListGroup as="ul">
+                    {documents.map( (document, idx) => (
                             <ListGroup.Item as="li" key={idx}>
                                 <DropboxCard 
                                     title={document.title}
@@ -22,9 +24,10 @@ function DropboxList({ documents }) {
                                     created={document.created}
                                 />
                             </ListGroup.Item>
-                    )
-                ))}
-            </ListGroup>
+                        )
+                    )}
+                </ListGroup>
+            </ListContainer>
         </ArrayConditionalWrapper>
         );
 }
