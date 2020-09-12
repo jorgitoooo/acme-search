@@ -13,7 +13,7 @@ function SharedWithInfo({ emails }) {
                 <Image src={peopleOutlineIconSrc} width={30} /><h5 className="mb-0 ml-1">Shared with</h5>
             </div>
             <div className="d-flex flex-wrap justify-content-center">
-                {emails.map((email, idx) => <p className="mb-0 text-muted">{email}</p>)}
+                {emails.map((email, idx) => <a key={idx} href={`mailto:${email}`} className="mb-0 text-muted">{email}</a>)}
             </div>
         </>
     );

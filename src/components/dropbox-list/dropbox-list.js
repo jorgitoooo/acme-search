@@ -5,6 +5,7 @@ import DropboxCard from "../subcomponents/dropbox-card";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function DropboxList({ documents }) {
+    console.log(documents);
     if (Array.isArray(documents) && documents.length > 0) {
         return (
             <>

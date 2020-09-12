@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CalendarList from "../calendar-list";
 import ContactList from "../contact-list";
+import DropboxList from "../dropbox-list";
 
 // Services
 import services from "../../services";
@@ -31,19 +32,14 @@ function SearchResults({ query, ...props }) {
 
     if (results) {
         // DEV
-        const calendarList = results.calendar.map((res, idx) => <li key={idx}>calendar: {res.title}</li>);
-        const contactList = results.contacts.map((res, idx) => <li key={idx}>contact: {res.name}</li>);
-        const dropboxList = results.dropbox.map((res, idx) => <li key={idx}>dropbox: {res.title}</li>);
         const slackList = results.slack.map((res, idx) => <li key={idx}>slack: {res.author}</li>);
         const tweetList = results.tweet.map((res, idx) => <li key={idx}>tweet: {res.user}</li>);
         return (
             <section className="results mx-auto text-center" {...props}>
                 <CalendarList calendar={results.calendar} />
                 <ContactList contacts={results.contacts} />
+                <DropboxList documents={results.dropbox} />
 
-                { calendarList }
-                { contactList }
-                { dropboxList }
                 { slackList }
                 { tweetList }
             </section>
