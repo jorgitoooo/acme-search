@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Subcomponents
 import DateInfo from "../date-info";
@@ -16,26 +17,29 @@ function SlackCard( { channel, author, message, createdAt, ...props } ) {
         <Card className="shadow calendar-card" bg="white" { ...props }>
             <Card.Body>
                 <h3 className="font-weight-bold">{author}</h3>
-                { channel && (
-                    <CardInfo 
-                        iconSrc={slackHashIcon}
-                        heading={"Channel"}
-                        content={channel}
-                    />
-                )}
-                { message && (
-                    <CardInfo
-                        iconSrc={messageCircleIcon}
-                        heading={"Message"}
-                        content={message}
-                    />
-                )}
+                <CardInfo 
+                    iconSrc={slackHashIcon}
+                    heading={"Channel"}
+                    content={channel}
+                />
+                <CardInfo
+                    iconSrc={messageCircleIcon}
+                    heading={"Message"}
+                    content={message}
+                />
             </Card.Body>
             <Card.Footer className="bg-white">
-                { createdAt && <DateInfo title={"Sent"} date={createdAt} /> }
+                <DateInfo title={"Sent"} date={createdAt} />
             </Card.Footer>
         </Card>
     );
 }
+
+SlackCard.propTypes = {
+    channel: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+};
 
 export default SlackCard;

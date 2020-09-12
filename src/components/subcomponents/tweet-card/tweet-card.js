@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Subcomponents
 import DateInfo from "../date-info";
@@ -15,13 +16,11 @@ function SlackCard( { user, message, createdAt, ...props } ) {
         <Card className="shadow calendar-card" bg="white" { ...props }>
             <Card.Body>
                 <h3 className="font-weight-bold">{user}</h3>
-                { message && (
-                    <CardInfo 
-                        iconSrc={twitterIcon}
-                        heading={"Message"}
-                        content={message}
-                    />
-                )}
+                <CardInfo 
+                    iconSrc={twitterIcon}
+                    heading={"Message"}
+                    content={message}
+                />
             </Card.Body>
             <Card.Footer className="bg-white">
                 { createdAt && <DateInfo title={"Tweeted"} date={createdAt} /> }
@@ -29,5 +28,11 @@ function SlackCard( { user, message, createdAt, ...props } ) {
         </Card>
     );
 }
+
+SlackCard.propTypes = {
+    user: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+};
 
 export default SlackCard;

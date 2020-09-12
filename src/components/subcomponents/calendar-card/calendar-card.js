@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Subcomponents
 import DateInfo from "../date-info";
@@ -19,5 +20,11 @@ function CalendarCard({title, invitees, date, ...props}) {
         </Card>
     );
 }
+
+CalendarCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    invitees: PropTypes.arrayOf(PropTypes.string),
+    date: PropTypes.string
+};
 
 export default CalendarCard;

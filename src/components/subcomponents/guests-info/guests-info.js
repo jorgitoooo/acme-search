@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import Badge from "react-bootstrap/Badge";
@@ -19,5 +20,9 @@ function GuestsInfo({ invitees }) {
         </>
     );
 }
+
+GuestsInfo.propTypes = {
+    invitees: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default GuestsInfo;

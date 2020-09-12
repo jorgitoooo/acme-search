@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import CardIconSubHeading from "../../styled-components/card-icon-subheading";
@@ -22,5 +23,9 @@ function PhoneInfo({ phones, ...props }) {
         )
     );
  }
+
+ PhoneInfo.propTypes = {
+    phones: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default PhoneInfo;

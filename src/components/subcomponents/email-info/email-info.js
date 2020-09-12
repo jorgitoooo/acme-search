@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import CardIconSubHeading from "../../styled-components/card-icon-subheading";
@@ -22,5 +23,9 @@ function EmailInfo({ emails, ...props }) {
         )
     );
  }
+
+ EmailInfo.propTypes = {
+    emails: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default EmailInfo;

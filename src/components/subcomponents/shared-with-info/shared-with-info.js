@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import CardIconSubHeading from "../../styled-components/card-icon-subheading";
@@ -19,5 +20,9 @@ function SharedWithInfo({ emails }) {
         )
     );
 }
+
+SharedWithInfo.propTypes = {
+    emails: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default SharedWithInfo;

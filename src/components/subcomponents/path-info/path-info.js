@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import CardIconSubHeading from "../../styled-components/card-icon-subheading";
@@ -15,5 +16,9 @@ function PathInfo({ path }) {
         </> 
     );
 }
+
+PathInfo.propTypes = {
+    path: PropTypes.string.isRequired
+};
 
 export default PathInfo;

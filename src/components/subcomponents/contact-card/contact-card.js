@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Subcomponents
 import DateInfo from "../date-info";
@@ -10,18 +11,13 @@ import Card from "react-bootstrap/Card";
 import CardHeading from "../../styled-components/card-heading";
 import CardSubHeading from "../../styled-components/card-subheading";
 
-/**
-    "name": "John Doe",
-    "company": "Acme Inc",
-    "emails": [
-        "john@acme.co",
-        "doe@gmail.com"
-    ],
-    "phones": [
-        "650-555-5555",
-        "+44 171 5555 5555"
-    ],
-    "last_contact"
+/* Contact Schema {
+        "name": String,
+        "company": String,
+        "emails": [String],
+        "phones": [String],
+        "lastContact": String
+    }
  */
 
 function ContactCard({name, company, emails, phones, lastContact, ...props}) {
@@ -39,5 +35,13 @@ function ContactCard({name, company, emails, phones, lastContact, ...props}) {
         </Card>
     );
 }
+
+ContactCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    company: PropTypes.string,
+    emails: PropTypes.arrayOf(PropTypes.string),
+    phones: PropTypes.arrayOf(PropTypes.string),
+    lastContact: PropTypes.string
+};
 
 export default ContactCard;

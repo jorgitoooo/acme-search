@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function DateInfo({ title, date, ...props }) {
    return (
@@ -8,5 +9,10 @@ function DateInfo({ title, date, ...props }) {
        </div>
    )
 }
+
+DateInfo.propTypes = {
+    title: PropTypes.string,
+    date: PropTypes.string.isRequired,
+};
 
 export default DateInfo;
