@@ -34,7 +34,6 @@ class ContactService {
 
     normalize(contacts) {
         return contacts.map(contact => {
-            console.log(contact.last_contact);
             return {
                 id: contact.id,
                 name: contact.name,
