@@ -1,4 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+// Subcomponents
 import SlackCard from "../subcomponents/slack-card";
 
 // Styled components
@@ -15,22 +18,30 @@ function SlackList({ messages }) {
             <ListContainer>
                 <ListHeading heading={"Slack"} />
                 <ListGroup as="ul">
-                    {messages && (
-                        messages.map( (message, idx) => (
-                                <ListGroup.Item as="li" key={idx}>
-                                    <SlackCard 
-                                        author={message.author}
-                                        channel={message.channel}
-                                        message={message.message}
-                                        createdAt={message.createdAt}
-                                    />
-                                </ListGroup.Item>
+                    {messages.map( (message, idx) => (
+                            <ListGroup.Item as="li" key={idx}>
+                                <SlackCard 
+                                    author={message.author}
+                                    channel={message.channel}
+                                    message={message.message}
+                                    createdAt={message.createdAt}
+                                />
+                            </ListGroup.Item>
                         )
-                    ))}
+                    )}
                 </ListGroup>
             </ListContainer>
         </ArrayConditionalWrapper>
     );
 }
+
+SlackList.propTypes = {
+    messages: PropTypes.arrayOf(PropTypes.exact({
+        author: PropTypes.string.isRequired,
+        channel: PropTypes.string.isRequired,
+        message: PropTypes.string.isRequired,
+        createdAt: PropTypes.string.isRequired,
+    }))
+};
 
 export default SlackList;

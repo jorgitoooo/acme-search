@@ -1,4 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+// Subcomponents
 import ContactCard from "../subcomponents/contact-card";
 
 // Styled components
@@ -32,5 +35,16 @@ function ContactList({ contacts }) {
         </ArrayConditionalWrapper>
     );
 }
+
+ContactList.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string,
+        name: PropTypes.string.isRequired,
+        company: PropTypes.string.isRequired,
+        emails: PropTypes.arrayOf(PropTypes.string),
+        phones: PropTypes.arrayOf(PropTypes.string),
+        lastContact: PropTypes.string.isRequired,
+    }))
+};
 
 export default ContactList;

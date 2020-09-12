@@ -1,4 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+// Subcomponents
 import DropboxCard from "../subcomponents/dropbox-card";
 
 // Styled components
@@ -31,5 +34,15 @@ function DropboxList({ documents }) {
         </ArrayConditionalWrapper>
         );
 }
+
+DropboxList.propTypes = {
+    documents: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        sharedWith: PropTypes.arrayOf(PropTypes.string),
+        created: PropTypes.string.isRequired,
+    }))
+};
 
 export default DropboxList;

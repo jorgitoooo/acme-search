@@ -1,4 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+// Subcomponents
 import CalendarCard from "../subcomponents/calendar-card";
 
 // Styled components
@@ -31,5 +34,14 @@ function CalendarList({ calendar }) {
         </ArrayConditionalWrapper>
     );
 }
+
+CalendarList.propTypes = {
+    calendar: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        invitees: PropTypes.arrayOf(PropTypes.string),
+        date: PropTypes.string.isRequired,
+    }))
+};
 
 export default CalendarList;

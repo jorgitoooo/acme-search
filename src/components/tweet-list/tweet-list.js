@@ -1,4 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+// Subcomponents
 import TweetCard from "../subcomponents/tweet-card";
 
 // Styled components
@@ -30,5 +33,13 @@ function TweetList({ tweets }) {
         </ArrayConditionalWrapper>
     );
 }
+
+TweetList.propTypes = {
+    tweets: PropTypes.arrayOf(PropTypes.exact({
+        user: PropTypes.string.isRequired,
+        message: PropTypes.string.isRequired,
+        createdAt: PropTypes.string.isRequired,
+    }))
+};
 
 export default TweetList;
