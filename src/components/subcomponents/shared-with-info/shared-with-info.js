@@ -14,7 +14,9 @@ function SharedWithInfo({ emails }) {
             <>
                 <CardIconSubHeading iconSrc={peopleOutlineIconSrc} heading={"Shared with"} />
                 <div className="d-flex flex-wrap justify-content-center">
-                    {emails.map((email, idx) => <CardLink key={idx} href={`mailto:${email}`} content={email} />)}
+                    {emails.length < 1 
+                        ? <p className="text-muted"> No one</p>
+                        : emails.map((email, idx) => <CardLink key={idx} href={`mailto:${email}`} content={email} />)}
                 </div>
             </>
         )
