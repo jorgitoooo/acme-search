@@ -21,7 +21,7 @@ class App extends React.Component {
   onSearch(query) {
     if (query) {
       this.setState({
-        results: services.main.getResults(query)
+        results: services.main.getSearchResults(query)
       });
     }
   }
