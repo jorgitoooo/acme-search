@@ -6,24 +6,28 @@ class QueryService {
             || queryStr.trim().length === 0) {
             return null;
         }
-        const queryTerms = queryStr.trim().split(" ");
-        const lowercaseQueryTerms = queryTerms.map(term => term.toLocaleLowerCase());
-        return lowercaseQueryTerms;
+        
+        const trimmedLowercaseQuery = queryStr.trim().toLocaleLowerCase();
+        const queryTerms = trimmedLowercaseQuery.split(" ");
+        
+        // Removes any repeating query terms
+        const preppedQuery = [...new Set([trimmedLowercaseQuery, ...queryTerms])];
+
+        return preppedQuery;
     }
 
     queryMatch(data, query) {
-        let isMatch = false;
         if (query
-            && data
-            && Array.isArray(query)
-            && Array.isArray(data.matching_terms)) {
-            query.forEach(term => {
+              && data
+              && Array.isArray(query)
+              && Array.isArray(data.matching_terms)) {
+            for (let term of query) {
                 if (data.matching_terms.includes(term)) {
-                    isMatch = true;
+                    return true;
                 }
-            });
+            }
         }
-        return isMatch;
+        return false;
     }
 };
 
