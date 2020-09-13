@@ -1,4 +1,4 @@
-import queryService from "./query-service";
+import Service from "./service";
 
 // Utilities
 import utils from "../utils";
@@ -16,21 +16,11 @@ import data from "../data/tweet.json";
         },
     ]
 */
-class TweetService {
-    constructor(tweets) {
-        this.tweets = tweets || [];
-    }
+
+class TweetService extends Service {
     getMatching(query) {
-        let filtered = [];
-        if (Array.isArray(query) && query.length > 0) {
-            filtered = this.tweets.filter(twt => (
-                queryService.queryMatch(twt, query)
-            ));
-
-            filtered = this.normalize(filtered);
-        }
-
-        return filtered;
+        let filtered = super.getMatching(query);
+        return this.normalize(filtered);
     }
 
     normalize(tweets) {

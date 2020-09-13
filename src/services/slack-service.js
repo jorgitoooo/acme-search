@@ -1,5 +1,9 @@
-import queryService from "./query-service";
+import Service from "./service";
+
+// Utilities
 import utils from "../utils";
+
+// JSON data
 import data from "../data/slack.json";
 
 /** 
@@ -14,23 +18,10 @@ import data from "../data/slack.json";
         },
     ]
 */
-class SlackService {
-    constructor(messages) {
-        this.messages = messages || [];
-    }
-
+class SlackService extends Service {
     getMatching(query) {
-        let filtered = [];
-        if (Array.isArray(query) && query.length > 0) {
-            filtered = this.messages.filter(msg => (
-                queryService.queryMatch(msg, query)
-            ));
-            
-            filtered = this.normalize(filtered);
-        }
-
-
-        return filtered;
+        let filtered = super.getMatching(query);
+        return this.normalize(filtered);
     }
 
     normalize(messages) {

@@ -1,5 +1,9 @@
-import queryService from "./query-service";
+import Service from "./service";
+
+// Utilities
 import utils from "../utils";
+
+// JSON data
 import data from "../data/contacts.json";
 
 /** 
@@ -15,21 +19,10 @@ import data from "../data/contacts.json";
         },
     ]
 */
-class ContactService {
-    constructor(contacts) {
-        this.contacts = contacts || [];
-    }
+class ContactService extends Service {
     getMatching(query) {
-        let filtered = [];
-        if (Array.isArray(query) && query.length > 0) {
-            filtered = this.contacts.filter(contact => (
-                queryService.queryMatch(contact, query)
-            ));
-
-            // Normalize filtered contacts
-            filtered = this.normalize(filtered);
-        }
-        return filtered;
+        let filtered = super.getMatching(query);
+        return this.normalize(filtered);
     }
 
     normalize(contacts) {

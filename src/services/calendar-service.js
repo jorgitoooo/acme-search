@@ -1,4 +1,4 @@
-import queryService from "./query-service";
+import Service from "./service";
 import utils from "../utils";
 
 // JSON Date
@@ -15,24 +15,12 @@ import data from "../data/calendar.json";
         },
     ]
 */
-class CalendarService {
-    constructor(calendar) {
-        this.calendar = calendar || [];
-    }
+class CalendarService extends Service {
     getMatching(query) {
-        let filtered = [];
-        if (Array.isArray(query) && query.length > 0) {
-            filtered = this.calendar.filter(event => (
-                queryService.queryMatch(event, query)
-            ));
-
-            // Normalize filtered events
-            filtered = this.normalize(filtered);
-        }
-        return filtered;
+        let filtered = super.getMatching(query);
+        return this.normalize(filtered);
     }
 
-    // TODO: Throw error if calendar not array ?
     normalize(calendar) {
         return calendar.map(event => {
             return {

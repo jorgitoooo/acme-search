@@ -1,5 +1,9 @@
-import queryService from "./query-service";
+import Service from "./service";
+
+// Utilities
 import utils from "../utils";
+
+// JSON data
 import data from "../data/dropbox.json";
 
 /** 
@@ -14,24 +18,12 @@ import data from "../data/dropbox.json";
         },
     ]
 */
-class DropboxService { 
-    constructor(documents) {
-        this.documents = documents || [];
-    }
+class DropboxService extends Service {
     getMatching(query) {
-        let filtered = [];
-        if (Array.isArray(query) && query.length > 0) {
-            filtered = this.documents.filter(doc => (
-                queryService.queryMatch(doc, query)
-            ));
-        }
-        
-        filtered = this.normalize(filtered);
-
-        return filtered;
+        let filtered = super.getMatching(query);
+        return this.normalize(filtered);
     }
 
-    // TODO: Throw error if calendar not array ?
     normalize(documents) {
         return documents.map(document => {
             return {
