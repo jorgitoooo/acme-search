@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import Image from "react-bootstrap/Image";
 
 function CardIconSubHeading( { iconSrc, heading } ) {
-    console.log(iconSrc, typeof iconSrc);
     return (
         <div className="d-flex justify-content-center align-items-center my-2">
             <Image src={iconSrc} width={30} />
