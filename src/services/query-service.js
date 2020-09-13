@@ -13,7 +13,10 @@ class QueryService {
 
     queryMatch(data, query) {
         let isMatch = false;
-        if (query && data && Array.isArray(data.matching_terms)) {
+        if (query
+            && data
+            && Array.isArray(query)
+            && Array.isArray(data.matching_terms)) {
             query.forEach(term => {
                 if (data.matching_terms.includes(term)) {
                     isMatch = true;
