@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 // Components
@@ -8,33 +8,11 @@ import DropboxList from "../dropbox-list";
 import SlackList from "../slack-list";
 import TweetList from "../tweet-list";
 
-// Services
-import services from "../../services";
 
 // CSS styles
 import "./search-resutls.css";
 
-function SearchResults({ query, ...props }) {
-    const [results, setResults] = useState(null);
-
-    useEffect(() => {
-        if (query) {
-            const calendarFiltered = services.calendar.getMatching(query);
-            const contactsFiltered = services.contact.getMatching(query);
-            const dropboxFiltered = services.dropbox.getMatching(query);
-            const slackFiltered = services.slack.getMatching(query);
-            const tweetsFiltered = services.tweet.getMatching(query);
-
-            setResults({
-                calendar: calendarFiltered,
-                contacts: contactsFiltered,
-                dropbox: dropboxFiltered,
-                slack: slackFiltered,
-                tweets: tweetsFiltered,
-            });
-        }
-    }, [query]);
-
+function SearchResults({ results, ...props }) {
     if (results) {
         return (
             <section className="results mx-auto text-center" {...props}>
@@ -51,7 +29,7 @@ function SearchResults({ query, ...props }) {
 }
 
 SearchResults.propTypes = {
-    query: PropTypes.arrayOf(PropTypes.string)
+    results: PropTypes.object,
 };
 
 export default SearchResults;

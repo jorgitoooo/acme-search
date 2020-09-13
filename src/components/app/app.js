@@ -3,20 +3,39 @@ import SearchBar from "../search-bar";
 import SearchCard from "../search-card";
 import SearchResults from "../search-results";
 
+// Services
+import services from "../../services";
+
 // CSS styles
 import "./app.css";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      query: null
+      results: null
     }
     this.onSearch = this.onSearch.bind(this);
   }
 
   onSearch(query) {
-    this.setState({ query });
+    if (query) {
+      const calendarFiltered = services.calendar.getMatching(query);
+      const contactsFiltered = services.contact.getMatching(query);
+      const dropboxFiltered = services.dropbox.getMatching(query);
+      const slackFiltered = services.slack.getMatching(query);
+      const tweetsFiltered = services.tweet.getMatching(query);
+
+      this.setState({
+        results: {
+          calendar: calendarFiltered,
+          contacts: contactsFiltered,
+          dropbox: dropboxFiltered,
+          slack: slackFiltered,
+          tweets: tweetsFiltered,
+        }
+      });
+    }
   }
 
   render() {
@@ -24,7 +43,7 @@ class App extends React.Component {
       <main className="p-3">
         <SearchCard>
           <SearchBar onSearch={this.onSearch} />
-          <SearchResults query={this.state.query} />
+          <SearchResults results={this.state.results} />
         </SearchCard>
       </main>
     );
