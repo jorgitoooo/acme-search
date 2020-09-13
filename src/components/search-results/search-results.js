@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
+// Components
 import CalendarList from "../calendar-list";
 import ContactList from "../contact-list";
 import DropboxList from "../dropbox-list";
@@ -46,5 +49,9 @@ function SearchResults({ query, ...props }) {
         return null;
     }
 }
+
+SearchResults.propTypes = {
+    query: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default SearchResults;

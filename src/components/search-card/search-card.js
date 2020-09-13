@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import Card from "react-bootstrap/Card";
@@ -10,5 +11,12 @@ function SearchCard({ children, ...props }) {
         </Card>
   );
 }
+
+SearchCard.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element
+  ])
+};
 
 export default SearchCard;

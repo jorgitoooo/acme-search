@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import Button from "react-bootstrap/Button";
@@ -23,7 +24,6 @@ class SearchBar extends React.Component {
         this.onHover = this.onHover.bind(this);
     }
 
-    // TODO: Implement
     onFormSubmit(e) {
         e.preventDefault();
         const { query } = this.state;
@@ -68,6 +68,8 @@ class SearchBar extends React.Component {
     }
 };
 
-// TODO: Add propTypes
+SearchBar.propTypes = {
+    onSearch: PropTypes.func.isRequired
+};
 
 export default SearchBar;
