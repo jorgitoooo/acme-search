@@ -1,5 +1,7 @@
+import analytics from "./analytics-util";
 import date from "./date-util";
 
-export default {
+export default Object.freeze({
+    analytics,
     date
-};
+});
