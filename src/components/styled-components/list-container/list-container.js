@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ListHeading( { children } ) {
     return (
@@ -6,6 +7,13 @@ function ListHeading( { children } ) {
             { children }
         </section>
     );
+}
+
+ListHeading.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.element),
+        PropTypes.element,
+    ]).isRequired
 }
 
 export default ListHeading;

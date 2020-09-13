@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styled components
 import CardIconSubHeading from "../card-icon-subheading";
@@ -12,5 +13,12 @@ function CardInfo({ iconSrc, heading, href, content }) {
         </> 
     );
 }
+
+CardInfo.propTypes = {
+    iconSrc: PropTypes.string.isRequired,
+    heading: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    href: PropTypes.string
+};
 
 export default CardInfo;

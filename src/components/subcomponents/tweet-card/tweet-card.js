@@ -24,7 +24,7 @@ function SlackCard( { user, message, createdAt, ...props } ) {
                 />
             </Card.Body>
             <Card.Footer className="bg-white">
-                { createdAt && <DateInfo title={"Tweeted"} date={createdAt} /> }
+                { <DateInfo title={"Tweeted"} date={createdAt} /> }
             </Card.Footer>
         </Card>
     );
