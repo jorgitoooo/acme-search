@@ -9,7 +9,6 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ListContainer from "../styled-components/list-container";
 import ListHeading from "../styled-components/list-heading";
 
-
 // Wrapper components
 import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
 

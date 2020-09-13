@@ -16,7 +16,7 @@ function CalendarCard({title, invitees, date, ...props}) {
                 <CardHeading heading={title} />
                 { invitees && <GuestsInfo invitees={invitees} />}
             </Card.Body>
-            <Card.Footer className="bg-white">{date && <DateInfo title={"Time & Date"} date={date} />}</Card.Footer>
+            <Card.Footer className="bg-white"><DateInfo title={"Time & Date"} date={date} /></Card.Footer>
         </Card>
     );
 }
@@ -24,7 +24,7 @@ function CalendarCard({title, invitees, date, ...props}) {
 CalendarCard.propTypes = {
     title: PropTypes.string.isRequired,
     invitees: PropTypes.arrayOf(PropTypes.string),
-    date: PropTypes.string
+    date: PropTypes.string.isRequired
 };
 
 export default CalendarCard;
