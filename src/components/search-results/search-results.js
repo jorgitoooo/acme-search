@@ -17,10 +17,10 @@ function SearchResults({ results, ...props }) {
         return (
             <section className="results mx-auto text-center" {...props}>
                 <CalendarList calendar={results.calendar} />
-                <ContactList contacts={results.contacts} />
+                <ContactList contacts={results.contact} />
                 <DropboxList documents={results.dropbox} />
                 <SlackList messages={results.slack} />
-                <TweetList tweets={results.tweets} />
+                <TweetList tweets={results.tweet} />
             </section>
         );
     } else {

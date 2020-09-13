@@ -20,20 +20,8 @@ class App extends React.Component {
 
   onSearch(query) {
     if (query) {
-      const calendarFiltered = services.calendar.getMatching(query);
-      const contactsFiltered = services.contact.getMatching(query);
-      const dropboxFiltered = services.dropbox.getMatching(query);
-      const slackFiltered = services.slack.getMatching(query);
-      const tweetsFiltered = services.tweet.getMatching(query);
-
       this.setState({
-        results: {
-          calendar: calendarFiltered,
-          contacts: contactsFiltered,
-          dropbox: dropboxFiltered,
-          slack: slackFiltered,
-          tweets: tweetsFiltered,
-        }
+        results: services.main.getResults(query)
       });
     }
   }
