@@ -8,15 +8,11 @@ import DropboxList from "../dropbox-list";
 import SlackList from "../slack-list";
 import TweetList from "../tweet-list";
 
-// Utilities
-import utils from "../../utils";
-
 // CSS styles
 import "./search-resutls.css";
 
 function SearchResults({ results, ...props }) {
-    if (results 
-          && utils.search.hasAtleastOneResult(results)) {
+    if (results) {
         return (
             <section className="results mx-auto text-center" {...props}>
                 <CalendarList calendar={results.calendar} />
