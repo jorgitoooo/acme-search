@@ -30,11 +30,17 @@ class SearchBar extends React.Component {
     onFormSubmit(e) {
         e.preventDefault();
         const { query } = this.state;
-        this.props.onSearch( services.query.prepareQuery(query) );
-        this.setState({ query: "" });
+        
+        const preppedQuery = services.query.prepareQuery(query);
+        
+        if (preppedQuery) {
+            this.props.onSearch( preppedQuery );
+            
+            // Tracks form submission
+            utils.analytics.submitEvent("search submit");
+        }
 
-        // Tracks form submission
-        utils.analytics.submitEvent("search submit");
+        this.setState({ query: "" });
     }
 
     onChange(e) {
