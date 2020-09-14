@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Subcomponents
-import DateInfo from "../date-info";
-import EmailInfo from "../email-info";
-import PhoneInfo from "../phone-info";
+import DateInfo from "../../subcomponents/date-info";
+import EmailInfo from "../../subcomponents/email-info";
+import PhoneInfo from "../../subcomponents/phone-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";

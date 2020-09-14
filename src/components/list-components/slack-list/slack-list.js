@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Subcomponents
-import SlackCard from "../subcomponents/slack-card";
+import SlackCard from "../../card-components/slack-card";
 
 // Styled components
 import ListGroup from "react-bootstrap/ListGroup";
-import ListContainer from "../styled-components/list-container";
-import ListHeading from "../styled-components/list-heading";
+import ListContainer from "../../styled-components/list-container";
+import ListHeading from "../../styled-components/list-heading";
 
 // Wrapper components
-import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
+import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
 function SlackList({ messages }) {
     return (

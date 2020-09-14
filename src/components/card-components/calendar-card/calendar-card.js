@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Subcomponents
-import DateInfo from "../date-info";
-import GuestsInfo from "../guests-info";
+import DateInfo from "../../subcomponents/date-info";
+import GuestsInfo from "../../subcomponents/guests-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";

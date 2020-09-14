@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Components
-import CalendarList from "../calendar-list";
-import ContactList from "../contact-list";
-import DropboxList from "../dropbox-list";
-import SlackList from "../slack-list";
-import TweetList from "../tweet-list";
+import CalendarList from "../list-components/calendar-list";
+import ContactList from "../list-components/contact-list";
+import DropboxList from "../list-components/dropbox-list";
+import SlackList from "../list-components/slack-list";
+import TweetList from "../list-components/tweet-list";
 
 // CSS styles
 import "./search-resutls.css";

@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Subcomponents
-import DateInfo from "../date-info";
-import PathInfo from "../path-info";
-import SharedWithInfo from "../shared-with-info";
+import DateInfo from "../../subcomponents/date-info";
+import PathInfo from "../../subcomponents/path-info";
+import SharedWithInfo from "../../subcomponents/shared-with-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";

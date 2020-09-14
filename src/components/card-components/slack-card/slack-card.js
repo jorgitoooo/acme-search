@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Subcomponents
-import DateInfo from "../date-info";
+import DateInfo from "../../subcomponents/date-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";

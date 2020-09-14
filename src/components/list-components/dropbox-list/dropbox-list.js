@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Subcomponents
-import DropboxCard from "../subcomponents/dropbox-card";
+import DropboxCard from "../../card-components/dropbox-card";
 
 // Styled components
 import ListGroup from "react-bootstrap/ListGroup";
-import ListContainer from "../styled-components/list-container";
-import ListHeading from "../styled-components/list-heading";
+import ListContainer from "../../styled-components/list-container";
+import ListHeading from "../../styled-components/list-heading";
 
 // Wrapper components
-import ArrayConditionalWrapper from "../wrappers/array-conditional-wrapper";
+import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
 function DropboxList({ documents }) {
     return (
