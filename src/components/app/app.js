@@ -20,7 +20,18 @@ class App extends React.Component {
     this.state = { results: null }
     this.onSearch = this.onSearch.bind(this);
 
-    utils.analytics.init(process.env.NODE_ENV === "development");
+    utils.analytics.init();
+    utils.analytics.externalLibLoadTime();
+  }
+
+  componentDidMount() {
+    // Tracks the time it takes our app to mount
+    utils.analytics.appMountTime();
+  }
+
+  componentWillUnmount() {
+    // Tracks the time a user has spent on the app
+    utils.analytics.appUsageTime();
   }
 
   onSearch(query) {

@@ -6,6 +6,9 @@ import utils from "../../../utils";
 
 function CardLink( { href, content, ...props } ) {
     function trackClick(e) {
+        if (process.env.NODE_ENV === "development") {
+            e.preventDefault();
+        }
         const { href } = e.target;
         if (href.startsWith("tel")) {
             utils.analytics.callEvent(`user calling ${href.split(":")[1]}`);
@@ -15,7 +18,7 @@ function CardLink( { href, content, ...props } ) {
             utils.analytics.clickEvent(`user clicked link ${href}`);
         }
     }
-    
+
     if (href) {
         return <a href={href} className="text-muted mb-0 d-block" onClick={trackClick} { ...props }>{content}</a>
     } else {

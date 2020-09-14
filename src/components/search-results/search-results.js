@@ -8,7 +8,6 @@ import DropboxList from "../dropbox-list";
 import SlackList from "../slack-list";
 import TweetList from "../tweet-list";
 
-
 // CSS styles
 import "./search-resutls.css";
 
