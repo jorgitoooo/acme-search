@@ -11,6 +11,7 @@ class Analytics {
         const gaOptions = {
             name: CONSTANTS.ANALYTICS.TRACKER_NAME,
             titleCase: false,
+            debug: true
         };
 
         if (this.debugMode)  {
