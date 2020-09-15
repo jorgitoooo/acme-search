@@ -1,13 +1,6 @@
-<h1 style="text-align: center; font-weight: bold; border-bottom: none; margin-bottom: 5px; background-color: #17a2b8; border-radius: 5px; padding: 5px 0px;">
-    ACME Search
-</h1>
-<h2 style="text-align: center;">
-    Neeva Assessment
-</h2>
+# ACME Search
 
-<br/>
-<hr/>
-<br/>
+## Neeva Assessment
 
 ## Running the project
 
@@ -59,41 +52,21 @@ There are two ways in which this project can be viewed. The first is simply to c
 
 Below I'll talk about some of the design decision I made pertaining to both software and UI/UX.
 
-<p style="text-align: center;font-weight: bold;">
-    Software
-</p>
+
+#### Software
 
 I had to make few technological decision when developing this project. The main one was choosing the frontend library that this project was built on. I chose React not only because it is heavily used at Neeva but also because it makes componentizing our views/logic incredibly simple which translates into greater reusability of our code and faster development time.
 
 When it comes decisions regarding the software I developed, I chose to implement the separation of concerns design pattern. I separated the presentation layer from the business logic layer. This separation can be seen by looking at the directory structure where I have the `services` handling the business logic while the `components` handles presentation logic. As stated before, the `data` directory holds our static `.json` files which currently serve as our resourse access layer that our `services` interact. However, the resource access layer can be easily swapped within our `services` by making a few modifications to the parent service constructor.
 
-<p style="text-align: center;font-weight: bold;">
-    UI/UX
-</p>
+#### UI/UX
 
 Keeping ease of use in mind I decided to avoid creating routes within this application and just displayed all of the information that is relevant to the user in one place. I took into account the fact that there could be many search results after a query so I implemented some navigational assistance, such as buttons that take the user to the results seciont of their interest and a button to take them back to the search bar. The information is displayed in cards. These cards contain a title, a body with all of the relevant information, and a footer which displays chronological information. Icons are used along with subtitles within the body to help visual user better understand the contents of what they're looking at. These informational cards have a consistent UI so as to not confused users.
 
 
 Below I've included some of my original card designs for each search category. Designs were created with the AdobeXD software.
 
-<div style="text-align: center;">
-    <img src="./design/calendar-asset.png" />
-</div>
-<div style="text-align: center;">
-    <img src="./design/contact-asset.png" />
-</div>
-<div style="text-align: center;">
-    <img src="./design/dropbox-asset.png" />
-</div>
-<div style="text-align: center;">
-    <img src="./design/slack-asset.png" />
-</div>
-<div style="text-align: center;">
-    <img src="./design/tweet-asset.png" />
-</div>
-
-<!-- Wanted to center images  -->
-<!-- ![Calendar card design](./design/calendar-asset.png)
+![Calendar card design](./design/calendar-asset.png)
 
 ![Contact card design](./design/contact-asset.png)
 
@@ -101,4 +74,4 @@ Below I've included some of my original card designs for each search category. D
 
 ![Slack card design](./design/slack-asset.png)
 
-![Tweet card design](./design/tweet-asset.png) -->
+![Tweet card design](./design/tweet-asset.png)
