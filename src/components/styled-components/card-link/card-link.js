@@ -5,22 +5,16 @@ import PropTypes from "prop-types";
 import utils from "../../../utils";
 
 function CardLink( { href, content, ...props } ) {
-    function trackClick(e) {
+    function onClick(e) {
         if (process.env.NODE_ENV === "development") {
             e.preventDefault();
         }
-        const { href } = e.target;
-        if (href.startsWith("tel")) {
-            utils.analytics.callEvent(`user calling ${href.split(":")[1]}`);
-        } else if (href.startsWith("mailto")){
-            utils.analytics.mailEvent('user clicked email address');
-        } else {
-            utils.analytics.clickEvent(`user clicked link ${href}`);
-        }
+        
+        utils.analytics.trackClick(e.target.href);
     }
 
     if (href) {
-        return <a href={href} className="text-muted mb-0 d-block" onClick={trackClick} { ...props }>{content}</a>
+        return <a href={href} className="text-muted mb-0 d-block" onClick={onClick} { ...props }>{content}</a>
     } else {
         return <p className="text-muted mb-0 d-block" { ...props }>{content}</p>
     }

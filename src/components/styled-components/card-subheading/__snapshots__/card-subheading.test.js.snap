@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSubHeading: Test visual of component renders correctly 1`] = `
+<h5
+  className="text-muted mb-0"
+>
+  Test Heading
+</h5>
+`;

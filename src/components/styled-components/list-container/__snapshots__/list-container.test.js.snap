@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListContainer: Test visual of component renders correctly 1`] = `
+<ListContainer>
+  <section
+    className="py-3"
+  >
+    <div>
+      Test Child One
+    </div>
+    <p>
+      Test Child Two
+    </p>
+  </section>
+</ListContainer>
+`;

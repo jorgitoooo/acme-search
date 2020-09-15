@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardHeading: Test visual components renders correctly 1`] = `
+<h4
+  className="font-weight-bold"
+>
+  Test Heading
+</h4>
+`;

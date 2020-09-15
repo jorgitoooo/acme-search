@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardLink: Test visual of component (\`a\` tag version) renders correctly 1`] = `
+<a
+  className="text-muted mb-0 d-block"
+  href="https://github.com/garciaj92"
+  onClick={[Function]}
+>
+  Test Content
+</a>
+`;
+
+exports[`CardLink: Test visual of component (\`p\` tag version) renders correctly 1`] = `
+<p
+  className="text-muted mb-0 d-block"
+>
+  Test Content
+</p>
+`;

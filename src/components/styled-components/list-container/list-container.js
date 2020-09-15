@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ListHeading( { children } ) {
+function ListContainer( { children } ) {
     return (
         <section className="py-3">
             { children }
@@ -9,11 +9,11 @@ function ListHeading( { children } ) {
     );
 }
 
-ListHeading.propTypes = {
+ListContainer.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.element),
         PropTypes.element,
     ]).isRequired
 }
 
-export default ListHeading;
+export default ListContainer;

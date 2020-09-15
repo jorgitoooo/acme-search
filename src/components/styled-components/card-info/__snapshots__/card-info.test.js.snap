@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardInfo: Test visual components renders correctly 1`] = `
+<CardInfo
+  content="Test Content"
+  heading="Test Heading"
+  href="https://github.com/garciaj92"
+  iconSrc="./test-icon.svg"
+>
+  <CardIconSubHeading
+    heading="Test Heading"
+    iconSrc="./test-icon.svg"
+  >
+    <div
+      className="d-flex justify-content-center align-items-center my-2"
+    >
+      <Image
+        fluid={false}
+        rounded={false}
+        roundedCircle={false}
+        src="./test-icon.svg"
+        thumbnail={false}
+        width={30}
+      >
+        <img
+          className=""
+          src="./test-icon.svg"
+          width={30}
+        />
+      </Image>
+      <h5
+        className="mb-0 mx-1"
+      >
+        Test Heading
+      </h5>
+    </div>
+  </CardIconSubHeading>
+  <CardLink
+    content="Test Content"
+    href="https://github.com/garciaj92"
+  >
+    <a
+      className="text-muted mb-0 d-block"
+      href="https://github.com/garciaj92"
+      onClick={[Function]}
+    >
+      Test Content
+    </a>
+  </CardLink>
+</CardInfo>
+`;
