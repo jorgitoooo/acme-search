@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInfo: Test visual components renders correctly 1`] = `
+<div
+  className="text-muted"
+>
+  <h5
+    className="font-weight-bold mb-0"
+  >
+    Test Title
+  </h5>
+  <p
+    className="font-weight-bold mb-0"
+  >
+    09/14/2020 - 11:00:00 AM
+  </p>
+</div>
+`;
