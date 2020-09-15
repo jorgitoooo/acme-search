@@ -1,0 +1,1 @@
+export const onClickFn = jest.fn(() => true);
