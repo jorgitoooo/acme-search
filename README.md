@@ -1,68 +1,104 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 style="text-align: center; font-weight: bold; border-bottom: none; margin-bottom: 5px; background-color: #17a2b8; border-radius: 5px; padding: 5px 0px;">
+    ACME Search
+</h1>
+<h2 style="text-align: center;">
+    Neeva Assessment
+</h2>
 
-## Available Scripts
+<br/>
+<hr/>
+<br/>
 
-In the project directory, you can run:
+## Running the project
 
-### `npm start`
+There are two ways in which this project can be viewed. The first is simply to click this link [https://neeva-acme-search.herokuapp.com](https://neeva-acme-search.herokuapp.com) which takes you to the deployed version of this project (Please keep in mind that you may experience a lag before the app loads since it is being run on the free dynos). The second way is to run it locally.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Running it locally
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Steps**
 
-### `npm test`
+1. If you are not in the directory that contains this project's `package.json` file please, from your terminal, `cd` into it.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    * `cd /path/to/acme_search`
 
-### `npm run build`
+2. From this project's directory install all of the dependencies decleared in the `package.json` file by running `npm install`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. After the installation is complete you can simply run `npm start` which will launch the ACME Search app on your default browser.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    * NOTE: Please be sure that you are not running any other programs on port **3000** prior to running `npm start`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. If you'd like to run the tests written for this app you may open up a new terminal tab or terminate our running app and from the same terminal tab run `npm test`.
 
-### `npm run eject`
+<br/>
+<hr/>
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Design
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Directory structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* `./src` contains all `.js` files developed for this project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* `./src/assets` contains all the icons used.
 
-## Learn More
+* `./src/components` contains all react components.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * NOTE: Each component has its own directory which contains all relevant files for that component including `*.test.js` files and `__snapshots__` if applicable.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* `./src/constants` contains all constant values used.
 
-### Code Splitting
+* `./src/data` contains the `.json` files provided.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* `./src/services` contains the services which are in charge of handeling the business logic.
 
-### Analyzing the Bundle Size
+    * NOTE: Data is currently read from static `.json` files but the services can be easily modified to read the data from a database or some external microservice.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* `./src/utils` contains utility functionality (eg. analytics utility) which is shared across various parts of this project.
 
-### Making a Progressive Web App
+### Design decisions
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Below I'll talk about some of the design decision I made pertaining to both software and UI/UX.
 
-### Advanced Configuration
+<p style="text-align: center;font-weight: bold;">
+    Software
+</p>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+I had to make few technological decision when developing this project. The main one was choosing the frontend library that this project was built on. I chose React not only because it is heavily used at Neeva but also because it makes componentizing our views/logic incredibly simple which translates into greater reusability of our code and faster development time.
 
-### Deployment
+When it comes decisions regarding the software I developed, I chose to implement the separation of concerns design pattern. I separated the presentation layer from the business logic layer. This separation can be seen by looking at the directory structure where I have the `services` handling the business logic while the `components` handles presentation logic. As stated before, the `data` directory holds our static `.json` files which currently serve as our resourse access layer that our `services` interact. However, the resource access layer can be easily swapped within our `services` by making a few modifications to the parent service constructor.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<p style="text-align: center;font-weight: bold;">
+    UI/UX
+</p>
 
-### `npm run build` fails to minify
+Keeping ease of use in mind I decided to avoid creating routes within this application and just displayed all of the information that is relevant to the user in one place. I took into account the fact that there could be many search results after a query so I implemented some navigational assistance, such as buttons that take the user to the results seciont of their interest and a button to take them back to the search bar. The information is displayed in cards. These cards contain a title, a body with all of the relevant information, and a footer which displays chronological information. Icons are used along with subtitles within the body to help visual user better understand the contents of what they're looking at. These informational cards have a consistent UI so as to not confused users.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Below I've included some of my original card designs for each search category. Designs were created with the AdobeXD software.
+
+<div style="text-align: center;">
+    <img src="./design/calendar-asset.png" />
+</div>
+<div style="text-align: center;">
+    <img src="./design/contact-asset.png" />
+</div>
+<div style="text-align: center;">
+    <img src="./design/dropbox-asset.png" />
+</div>
+<div style="text-align: center;">
+    <img src="./design/slack-asset.png" />
+</div>
+<div style="text-align: center;">
+    <img src="./design/tweet-asset.png" />
+</div>
+
+<!-- Wanted to center images  -->
+<!-- ![Calendar card design](./design/calendar-asset.png)
+
+![Contact card design](./design/contact-asset.png)
+
+![Dropbox card design](./design/dropbox-asset.png)
+
+![Slack card design](./design/slack-asset.png)
+
+![Tweet card design](./design/tweet-asset.png) -->
