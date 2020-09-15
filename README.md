@@ -1,13 +1,8 @@
 # ACME Search
 
-<h2 style="text-align: center !important;"> 
-    Neeva Assessment
-</h2>
-
 <br />
 <hr />
 <br />
-
 
 ## Running the project
 
