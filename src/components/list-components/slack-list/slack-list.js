@@ -12,10 +12,10 @@ import ListHeading from "../../styled-components/list-heading";
 // Wrapper components
 import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
-function SlackList({ messages }) {
+function SlackList({ messages, ...props }) {
     return (
         <ArrayConditionalWrapper array={messages}>
-            <ListContainer>
+            <ListContainer {...props}>
                 <ListHeading heading={"Slack"} />
                 <ListGroup as="ul">
                     {messages.map( (message, idx) => (

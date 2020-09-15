@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailInfo: Test visual components renders correctly 1`] = `
+<EmailInfo
+  emails={
+    Array [
+      "test1@test.com, test2@test.com",
+    ]
+  }
+>
+  <div
+    className="d-sm-inline-block align-baseline-top m-3"
+  >
+    <CardIconSubHeading
+      heading="Email"
+      iconSrc="email.svg"
+    >
+      <div
+        className="d-flex justify-content-center align-items-center my-2"
+      >
+        <Image
+          fluid={false}
+          rounded={false}
+          roundedCircle={false}
+          src="email.svg"
+          thumbnail={false}
+          width={30}
+        >
+          <img
+            className=""
+            src="email.svg"
+            width={30}
+          />
+        </Image>
+        <h5
+          className="mb-0 mx-1"
+        >
+          Email
+        </h5>
+      </div>
+    </CardIconSubHeading>
+    <CardLink
+      content="test1@test.com, test2@test.com"
+      href="mailto:test1@test.com, test2@test.com"
+      key="0"
+    >
+      <a
+        className="text-muted mb-0 d-block"
+        href="mailto:test1@test.com, test2@test.com"
+        onClick={[Function]}
+      >
+        test1@test.com, test2@test.com
+      </a>
+    </CardLink>
+  </div>
+</EmailInfo>
+`;

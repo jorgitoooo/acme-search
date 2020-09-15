@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ListContainer( { children } ) {
+function ListContainer( { children, ...props } ) {
     return (
-        <section className="py-3">
+        <section className="py-3" {...props}>
             { children }
         </section>
     );

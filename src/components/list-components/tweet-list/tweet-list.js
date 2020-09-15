@@ -12,10 +12,10 @@ import ListHeading from "../../styled-components/list-heading";
 // Wrapper components
 import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
-function TweetList({ tweets }) {
+function TweetList({ tweets, ...props }) {
     return (
         <ArrayConditionalWrapper array={tweets}>
-            <ListContainer>
+            <ListContainer {...props}>
                 <ListHeading heading={"Tweets"} />
                 <ListGroup as="ul">
                     {tweets.map( (tweet, idx) => (

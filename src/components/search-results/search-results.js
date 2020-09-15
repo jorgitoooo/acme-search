@@ -15,11 +15,11 @@ function SearchResults({ results, ...props }) {
     if (results) {
         return (
             <section className="results mx-auto text-center" {...props}>
-                <CalendarList calendar={results.calendar} />
-                <ContactList contacts={results.contact} />
-                <DropboxList documents={results.dropbox} />
-                <SlackList messages={results.slack} />
-                <TweetList tweets={results.tweet} />
+                <CalendarList id={"calendar"} calendar={results.calendar} />
+                <ContactList id={"contact"} contacts={results.contact} />
+                <DropboxList id={"dropbox"} documents={results.dropbox} />
+                <SlackList id={"slack"} messages={results.slack} />
+                <TweetList id={"tweet"} tweets={results.tweet} />
             </section>
         );
     } else {

@@ -12,10 +12,10 @@ import ListHeading from "../../styled-components/list-heading";
 // Wrapper components
 import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
-function CalendarList({ calendar }) {
+function CalendarList({ calendar, ...props }) {
     return (
         <ArrayConditionalWrapper array={calendar}>
-            <ListContainer>
+            <ListContainer {...props}>
                 <ListHeading heading={"Calendar"} />
                 <ListGroup as="ul">
                     {calendar.map( (event, idx) => (

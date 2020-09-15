@@ -54,7 +54,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <Container fluid className="p-3 text-center text-dark">
-                <h1 className="display-4 font-weight-lighter">Acme Search</h1>
+                <h1 className="display-4 font-weight-lighter">ACME Search</h1>
                 <Form 
                     className={"mx-auto d-flex border rounded-pill" + (this.state.hover ? " shadow": "")}
                     onSubmit={this.onFormSubmit}

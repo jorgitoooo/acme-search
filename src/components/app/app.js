@@ -4,6 +4,8 @@ import React from 'react';
 import SearchBar from "../search-bar";
 import SearchCard from "../search-card";
 import SearchResults from "../search-results";
+import SearchResultsLinks from "../search-results-links";
+import ButtonScroll from "../button-scroll";
 
 // Services
 import services from "../../services";
@@ -17,14 +19,30 @@ import "./app.css";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { results: null }
+    this.state = {
+      results: null,
+      scrollButtonActive: false
+    }
     this.onSearch = this.onSearch.bind(this);
+    this.ref = React.createRef();
 
     utils.analytics.init();
     utils.analytics.externalLibLoadTime();
   }
 
   componentDidMount() {
+    window.addEventListener("scroll", (e) => {
+      if (window.scrollY >= 500) {
+        this.setState({ 
+          scrollButtonActive: true
+        });
+      } else {
+          this.setState({ 
+            scrollButtonActive: false
+          });
+      }
+    });
+
     // Tracks the time it takes our app to mount
     utils.analytics.appMountTime();
   }
@@ -44,11 +62,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <main className="p-3">
+      <main ref={this.ref}>
         <SearchCard>
           <SearchBar onSearch={this.onSearch} />
+          <SearchResultsLinks results={this.state.results} />
           <SearchResults results={this.state.results} />
         </SearchCard>
+        <ButtonScroll ref={this.ref} active={this.state.scrollButtonActive} />
       </main>
     );
   }

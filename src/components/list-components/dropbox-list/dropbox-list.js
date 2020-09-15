@@ -12,10 +12,10 @@ import ListHeading from "../../styled-components/list-heading";
 // Wrapper components
 import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
-function DropboxList({ documents }) {
+function DropboxList({ documents, ...props }) {
     return (
         <ArrayConditionalWrapper array={documents}>
-            <ListContainer>
+            <ListContainer {...props}>
             <ListHeading heading={"Dropbox"} />
                 <ListGroup as="ul">
                     {documents.map( (document, idx) => (

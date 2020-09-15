@@ -12,10 +12,10 @@ import ListHeading from "../../styled-components/list-heading";
 // Wrapper components
 import ArrayConditionalWrapper from "../../wrappers/array-conditional-wrapper";
 
-function ContactList({ contacts }) {
+function ContactList({ contacts, ...props }) {
     return (
         <ArrayConditionalWrapper array={contacts}>
-            <ListContainer>
+            <ListContainer {...props}>
                 <ListHeading heading={"Contacts"} />
                 <ListGroup as="ul">
                     {contacts.map( contact => (

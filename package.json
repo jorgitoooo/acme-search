@@ -1,5 +1,19 @@
 {
   "name": "acme_search",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/styled_components/**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +34,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
