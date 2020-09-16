@@ -18,7 +18,7 @@ function SlackList({ messages, ...props }) {
             <ListContainer {...props}>
                 <ListHeading data-testid="list-heading" heading={"Slack"} />
                 <ListGroup as="ul">
-                    {messages.map( (message, idx) => (
+                    {messages && messages.map( (message, idx) => (
                             <ListGroup.Item as="li" key={idx}>
                                 <SlackCard 
                                     author={message.author}

@@ -18,7 +18,7 @@ function CalendarList({ calendar, ...props }) {
             <ListContainer {...props}>
                 <ListHeading data-testid="list-heading" heading={"Calendar"} />
                 <ListGroup as="ul">
-                    {calendar.map( (event, idx) => (
+                    {calendar && calendar.map( (event, idx) => (
                             <ListGroup.Item as="li" key={idx}>
                                 <CalendarCard 
                                     title={event.title}

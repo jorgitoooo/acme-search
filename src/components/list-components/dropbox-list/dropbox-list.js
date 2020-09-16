@@ -18,7 +18,7 @@ function DropboxList({ documents, ...props }) {
             <ListContainer {...props}>
             <ListHeading data-testid="list-heading" heading={"Dropbox"} />
                 <ListGroup as="ul">
-                    {documents.map( (document, idx) => (
+                    {documents && documents.map( (document, idx) => (
                             <ListGroup.Item as="li" key={idx}>
                                 <DropboxCard 
                                     title={document.title}

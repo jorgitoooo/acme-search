@@ -18,7 +18,7 @@ function ContactList({ contacts, ...props }) {
             <ListContainer {...props}>
                 <ListHeading data-testid="list-heading" heading={"Contacts"} />
                 <ListGroup as="ul">
-                    {contacts.map( (contact, idx) => (
+                    {contacts && contacts.map( (contact, idx) => (
                             <ListGroup.Item as="li" key={idx}>
                                 <ContactCard 
                                     name={contact.name}

@@ -18,7 +18,7 @@ function TweetList({ tweets, ...props }) {
             <ListContainer {...props}>
                 <ListHeading data-testid="list-heading" heading={"Tweets"} />
                 <ListGroup as="ul">
-                    {tweets.map( (tweet, idx) => (
+                    {tweets && tweets.map( (tweet, idx) => (
                             <ListGroup.Item as="li" key={idx}>
                                 <TweetCard 
                                     user={tweet.user}
