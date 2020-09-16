@@ -1,0 +1,1202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults: Test visual of component renders correctly 1`] = `
+<SearchResults
+  results={
+    Object {
+      "calendar": Array [
+        Object {
+          "date": "01/01/2020 - 10:00:00 AM",
+          "invitees": Array [
+            "Test Guest",
+          ],
+          "title": "Calendar Test",
+        },
+      ],
+      "contact": Array [
+        Object {
+          "company": "Neeva",
+          "emails": Array [
+            "me@jorgegarcia.co",
+          ],
+          "lastContact": "01/01/2020 - 4:00:00 PM",
+          "name": "Jorge L. Garcia",
+          "phones": Array [
+            "555-555-5555",
+          ],
+        },
+      ],
+      "dropbox": Array [
+        Object {
+          "created": "01/01/2020 - 4:00:00 PM",
+          "path": "/test/path/dropbox.json",
+          "sharedWith": Array [
+            "me@jorgegarcia.co",
+          ],
+          "title": "Dropbox Test",
+        },
+      ],
+      "slack": Array [
+        Object {
+          "author": "jorgelgarcia",
+          "channel": "test-channel",
+          "createdAt": "01/01/2020 - 9:00:00 AM",
+          "message": "This is a test.",
+        },
+      ],
+      "tweet": Array [
+        Object {
+          "createdAt": "01/01/2020 - 9:00:00 AM",
+          "message": "This is a test.",
+          "user": "@jorgelgarcia",
+        },
+      ],
+    }
+  }
+>
+  <section
+    className="results mx-auto text-center"
+  >
+    <CalendarList
+      calendar={
+        Array [
+          Object {
+            "date": "01/01/2020 - 10:00:00 AM",
+            "invitees": Array [
+              "Test Guest",
+            ],
+            "title": "Calendar Test",
+          },
+        ]
+      }
+      id="calendar"
+    >
+      <ArrayConditionalWrapper
+        array={
+          Array [
+            Object {
+              "date": "01/01/2020 - 10:00:00 AM",
+              "invitees": Array [
+                "Test Guest",
+              ],
+              "title": "Calendar Test",
+            },
+          ]
+        }
+      >
+        <ListContainer
+          id="calendar"
+        >
+          <section
+            className="py-3"
+            id="calendar"
+          >
+            <ListHeading
+              data-testid="list-heading"
+              heading="Calendar"
+            >
+              <h1
+                className="font-weight-bold"
+              >
+                Calendar
+              </h1>
+            </ListHeading>
+            <ListGroup
+              as="ul"
+            >
+              <ForwardRef
+                as="ul"
+                className="list-group"
+                onSelect={[Function]}
+              >
+                <ul
+                  className="list-group"
+                  onKeyDown={[Function]}
+                >
+                  <ListGroupItem
+                    active={false}
+                    as="li"
+                    disabled={false}
+                    key="0"
+                  >
+                    <ForwardRef
+                      as="li"
+                      className="list-group-item"
+                      disabled={false}
+                      eventKey={null}
+                      onClick={[Function]}
+                    >
+                      <li
+                        className="list-group-item"
+                        data-rb-event-key={null}
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        <CalendarCard
+                          date="01/01/2020 - 10:00:00 AM"
+                          invitees={
+                            Array [
+                              "Test Guest",
+                            ]
+                          }
+                          title="Calendar Test"
+                        >
+                          <Card
+                            bg="white"
+                            body={false}
+                            className="shadow calendar-card"
+                          >
+                            <div
+                              className="shadow calendar-card card bg-white"
+                            >
+                              <CardBody>
+                                <div
+                                  className="card-body"
+                                >
+                                  <CardHeading
+                                    data-testid="card-heading"
+                                    heading="Calendar Test"
+                                  >
+                                    <h4
+                                      className="font-weight-bold"
+                                    >
+                                      Calendar Test
+                                    </h4>
+                                  </CardHeading>
+                                  <GuestsInfo
+                                    invitees={
+                                      Array [
+                                        "Test Guest",
+                                      ]
+                                    }
+                                  >
+                                    <div
+                                      className="d-flex justify-content-center align-items-center my-2"
+                                    >
+                                      <Image
+                                        fluid={false}
+                                        rounded={false}
+                                        roundedCircle={false}
+                                        src="people-outline.svg"
+                                        thumbnail={false}
+                                        width={30}
+                                      >
+                                        <img
+                                          className=""
+                                          src="people-outline.svg"
+                                          width={30}
+                                        />
+                                      </Image>
+                                      <h5
+                                        className="mb-0 ml-1"
+                                      >
+                                        1
+                                         invited
+                                      </h5>
+                                    </div>
+                                    <div
+                                      className="d-flex flex-wrap justify-content-center"
+                                    >
+                                      <Badge
+                                        className="m-1"
+                                        key="0"
+                                        pill={true}
+                                        variant="info"
+                                      >
+                                        <span
+                                          className="m-1 badge badge-pill badge-info"
+                                        >
+                                          Test Guest
+                                        </span>
+                                      </Badge>
+                                    </div>
+                                  </GuestsInfo>
+                                </div>
+                              </CardBody>
+                              <CardFooter
+                                className="bg-white"
+                                data-testid="card-footer"
+                              >
+                                <div
+                                  className="bg-white card-footer"
+                                  data-testid="card-footer"
+                                >
+                                  <DateInfo
+                                    date="01/01/2020 - 10:00:00 AM"
+                                    title="Time & Date"
+                                  >
+                                    <div
+                                      className="text-muted"
+                                    >
+                                      <h5
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        Time & Date
+                                      </h5>
+                                      <p
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        01/01/2020 - 10:00:00 AM
+                                      </p>
+                                    </div>
+                                  </DateInfo>
+                                </div>
+                              </CardFooter>
+                            </div>
+                          </Card>
+                        </CalendarCard>
+                      </li>
+                    </ForwardRef>
+                  </ListGroupItem>
+                </ul>
+              </ForwardRef>
+            </ListGroup>
+          </section>
+        </ListContainer>
+      </ArrayConditionalWrapper>
+    </CalendarList>
+    <ContactList
+      contacts={
+        Array [
+          Object {
+            "company": "Neeva",
+            "emails": Array [
+              "me@jorgegarcia.co",
+            ],
+            "lastContact": "01/01/2020 - 4:00:00 PM",
+            "name": "Jorge L. Garcia",
+            "phones": Array [
+              "555-555-5555",
+            ],
+          },
+        ]
+      }
+      id="contact"
+    >
+      <ArrayConditionalWrapper
+        array={
+          Array [
+            Object {
+              "company": "Neeva",
+              "emails": Array [
+                "me@jorgegarcia.co",
+              ],
+              "lastContact": "01/01/2020 - 4:00:00 PM",
+              "name": "Jorge L. Garcia",
+              "phones": Array [
+                "555-555-5555",
+              ],
+            },
+          ]
+        }
+      >
+        <ListContainer
+          id="contact"
+        >
+          <section
+            className="py-3"
+            id="contact"
+          >
+            <ListHeading
+              data-testid="list-heading"
+              heading="Contacts"
+            >
+              <h1
+                className="font-weight-bold"
+              >
+                Contacts
+              </h1>
+            </ListHeading>
+            <ListGroup
+              as="ul"
+            >
+              <ForwardRef
+                as="ul"
+                className="list-group"
+                onSelect={[Function]}
+              >
+                <ul
+                  className="list-group"
+                  onKeyDown={[Function]}
+                >
+                  <ListGroupItem
+                    active={false}
+                    as="li"
+                    disabled={false}
+                    key="0"
+                  >
+                    <ForwardRef
+                      as="li"
+                      className="list-group-item"
+                      disabled={false}
+                      eventKey={null}
+                      onClick={[Function]}
+                    >
+                      <li
+                        className="list-group-item"
+                        data-rb-event-key={null}
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        <ContactCard
+                          company="Neeva"
+                          emails={
+                            Array [
+                              "me@jorgegarcia.co",
+                            ]
+                          }
+                          lastContact="01/01/2020 - 4:00:00 PM"
+                          name="Jorge L. Garcia"
+                          phones={
+                            Array [
+                              "555-555-5555",
+                            ]
+                          }
+                        >
+                          <Card
+                            bg="white"
+                            body={false}
+                            className="shadow"
+                          >
+                            <div
+                              className="shadow card bg-white"
+                            >
+                              <CardBody>
+                                <div
+                                  className="card-body"
+                                >
+                                  <CardHeading
+                                    data-testid="card-heading"
+                                    heading="Jorge L. Garcia"
+                                  >
+                                    <h4
+                                      className="font-weight-bold"
+                                    >
+                                      Jorge L. Garcia
+                                    </h4>
+                                  </CardHeading>
+                                  <CardSubHeading
+                                    heading="Neeva"
+                                  >
+                                    <h5
+                                      className="text-muted mb-0"
+                                    >
+                                      Neeva
+                                    </h5>
+                                  </CardSubHeading>
+                                  <EmailInfo
+                                    emails={
+                                      Array [
+                                        "me@jorgegarcia.co",
+                                      ]
+                                    }
+                                  >
+                                    <div
+                                      className="d-sm-inline-block align-baseline-top m-3"
+                                    >
+                                      <CardIconSubHeading
+                                        heading="Email"
+                                        iconSrc="email.svg"
+                                      >
+                                        <div
+                                          className="d-flex justify-content-center align-items-center my-2"
+                                        >
+                                          <Image
+                                            fluid={false}
+                                            rounded={false}
+                                            roundedCircle={false}
+                                            src="email.svg"
+                                            thumbnail={false}
+                                            width={30}
+                                          >
+                                            <img
+                                              className=""
+                                              src="email.svg"
+                                              width={30}
+                                            />
+                                          </Image>
+                                          <h5
+                                            className="mb-0 mx-1"
+                                          >
+                                            Email
+                                          </h5>
+                                        </div>
+                                      </CardIconSubHeading>
+                                      <CardLink
+                                        content="me@jorgegarcia.co"
+                                        href="mailto:me@jorgegarcia.co"
+                                        key="0"
+                                      >
+                                        <a
+                                          className="text-muted mb-0 d-block"
+                                          href="mailto:me@jorgegarcia.co"
+                                          onClick={[Function]}
+                                        >
+                                          me@jorgegarcia.co
+                                        </a>
+                                      </CardLink>
+                                    </div>
+                                  </EmailInfo>
+                                  <PhoneInfo
+                                    phones={
+                                      Array [
+                                        "555-555-5555",
+                                      ]
+                                    }
+                                  >
+                                    <div
+                                      className="d-sm-inline-block align-baseline-top mx-3"
+                                    >
+                                      <CardIconSubHeading
+                                        heading="Email"
+                                        iconSrc="phone.svg"
+                                      >
+                                        <div
+                                          className="d-flex justify-content-center align-items-center my-2"
+                                        >
+                                          <Image
+                                            fluid={false}
+                                            rounded={false}
+                                            roundedCircle={false}
+                                            src="phone.svg"
+                                            thumbnail={false}
+                                            width={30}
+                                          >
+                                            <img
+                                              className=""
+                                              src="phone.svg"
+                                              width={30}
+                                            />
+                                          </Image>
+                                          <h5
+                                            className="mb-0 mx-1"
+                                          >
+                                            Email
+                                          </h5>
+                                        </div>
+                                      </CardIconSubHeading>
+                                      <CardLink
+                                        content="555-555-5555"
+                                        href="tel:555-555-5555"
+                                        key="0"
+                                      >
+                                        <a
+                                          className="text-muted mb-0 d-block"
+                                          href="tel:555-555-5555"
+                                          onClick={[Function]}
+                                        >
+                                          555-555-5555
+                                        </a>
+                                      </CardLink>
+                                    </div>
+                                  </PhoneInfo>
+                                </div>
+                              </CardBody>
+                              <CardFooter
+                                className="bg-white"
+                                data-testid="card-footer"
+                              >
+                                <div
+                                  className="bg-white card-footer"
+                                  data-testid="card-footer"
+                                >
+                                  <DateInfo
+                                    date="01/01/2020 - 4:00:00 PM"
+                                    title="Last Contacted"
+                                  >
+                                    <div
+                                      className="text-muted"
+                                    >
+                                      <h5
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        Last Contacted
+                                      </h5>
+                                      <p
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        01/01/2020 - 4:00:00 PM
+                                      </p>
+                                    </div>
+                                  </DateInfo>
+                                </div>
+                              </CardFooter>
+                            </div>
+                          </Card>
+                        </ContactCard>
+                      </li>
+                    </ForwardRef>
+                  </ListGroupItem>
+                </ul>
+              </ForwardRef>
+            </ListGroup>
+          </section>
+        </ListContainer>
+      </ArrayConditionalWrapper>
+    </ContactList>
+    <DropboxList
+      documents={
+        Array [
+          Object {
+            "created": "01/01/2020 - 4:00:00 PM",
+            "path": "/test/path/dropbox.json",
+            "sharedWith": Array [
+              "me@jorgegarcia.co",
+            ],
+            "title": "Dropbox Test",
+          },
+        ]
+      }
+      id="dropbox"
+    >
+      <ArrayConditionalWrapper
+        array={
+          Array [
+            Object {
+              "created": "01/01/2020 - 4:00:00 PM",
+              "path": "/test/path/dropbox.json",
+              "sharedWith": Array [
+                "me@jorgegarcia.co",
+              ],
+              "title": "Dropbox Test",
+            },
+          ]
+        }
+      >
+        <ListContainer
+          id="dropbox"
+        >
+          <section
+            className="py-3"
+            id="dropbox"
+          >
+            <ListHeading
+              data-testid="list-heading"
+              heading="Dropbox"
+            >
+              <h1
+                className="font-weight-bold"
+              >
+                Dropbox
+              </h1>
+            </ListHeading>
+            <ListGroup
+              as="ul"
+            >
+              <ForwardRef
+                as="ul"
+                className="list-group"
+                onSelect={[Function]}
+              >
+                <ul
+                  className="list-group"
+                  onKeyDown={[Function]}
+                >
+                  <ListGroupItem
+                    active={false}
+                    as="li"
+                    disabled={false}
+                    key="0"
+                  >
+                    <ForwardRef
+                      as="li"
+                      className="list-group-item"
+                      disabled={false}
+                      eventKey={null}
+                      onClick={[Function]}
+                    >
+                      <li
+                        className="list-group-item"
+                        data-rb-event-key={null}
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        <DropboxCard
+                          created="01/01/2020 - 4:00:00 PM"
+                          path="/test/path/dropbox.json"
+                          sharedWith={
+                            Array [
+                              "me@jorgegarcia.co",
+                            ]
+                          }
+                          title="Dropbox Test"
+                        >
+                          <Card
+                            bg="white"
+                            body={false}
+                            className="shadow calendar-card"
+                          >
+                            <div
+                              className="shadow calendar-card card bg-white"
+                            >
+                              <CardBody>
+                                <div
+                                  className="card-body"
+                                >
+                                  <CardHeading
+                                    data-testid="card-heading"
+                                    heading="Dropbox Test"
+                                  >
+                                    <h4
+                                      className="font-weight-bold"
+                                    >
+                                      Dropbox Test
+                                    </h4>
+                                  </CardHeading>
+                                  <PathInfo
+                                    path="/test/path/dropbox.json"
+                                  >
+                                    <CardIconSubHeading
+                                      heading="Path"
+                                      iconSrc="file.svg"
+                                    >
+                                      <div
+                                        className="d-flex justify-content-center align-items-center my-2"
+                                      >
+                                        <Image
+                                          fluid={false}
+                                          rounded={false}
+                                          roundedCircle={false}
+                                          src="file.svg"
+                                          thumbnail={false}
+                                          width={30}
+                                        >
+                                          <img
+                                            className=""
+                                            src="file.svg"
+                                            width={30}
+                                          />
+                                        </Image>
+                                        <h5
+                                          className="mb-0 mx-1"
+                                        >
+                                          Path
+                                        </h5>
+                                      </div>
+                                    </CardIconSubHeading>
+                                    <CardLink
+                                      content="/test/path/dropbox.json"
+                                    >
+                                      <p
+                                        className="text-muted mb-0 d-block"
+                                      >
+                                        /test/path/dropbox.json
+                                      </p>
+                                    </CardLink>
+                                  </PathInfo>
+                                  <SharedWithInfo
+                                    emails={
+                                      Array [
+                                        "me@jorgegarcia.co",
+                                      ]
+                                    }
+                                  >
+                                    <CardIconSubHeading
+                                      heading="Shared with"
+                                      iconSrc="people-outline.svg"
+                                    >
+                                      <div
+                                        className="d-flex justify-content-center align-items-center my-2"
+                                      >
+                                        <Image
+                                          fluid={false}
+                                          rounded={false}
+                                          roundedCircle={false}
+                                          src="people-outline.svg"
+                                          thumbnail={false}
+                                          width={30}
+                                        >
+                                          <img
+                                            className=""
+                                            src="people-outline.svg"
+                                            width={30}
+                                          />
+                                        </Image>
+                                        <h5
+                                          className="mb-0 mx-1"
+                                        >
+                                          Shared with
+                                        </h5>
+                                      </div>
+                                    </CardIconSubHeading>
+                                    <div
+                                      className="d-flex flex-wrap justify-content-center"
+                                    >
+                                      <CardLink
+                                        content="me@jorgegarcia.co"
+                                        href="mailto:me@jorgegarcia.co"
+                                        key="0"
+                                      >
+                                        <a
+                                          className="text-muted mb-0 d-block"
+                                          href="mailto:me@jorgegarcia.co"
+                                          onClick={[Function]}
+                                        >
+                                          me@jorgegarcia.co
+                                        </a>
+                                      </CardLink>
+                                    </div>
+                                  </SharedWithInfo>
+                                </div>
+                              </CardBody>
+                              <CardFooter
+                                className="bg-white"
+                                data-testid="card-footer"
+                              >
+                                <div
+                                  className="bg-white card-footer"
+                                  data-testid="card-footer"
+                                >
+                                  <DateInfo
+                                    date="01/01/2020 - 4:00:00 PM"
+                                    title="Created"
+                                  >
+                                    <div
+                                      className="text-muted"
+                                    >
+                                      <h5
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        Created
+                                      </h5>
+                                      <p
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        01/01/2020 - 4:00:00 PM
+                                      </p>
+                                    </div>
+                                  </DateInfo>
+                                </div>
+                              </CardFooter>
+                            </div>
+                          </Card>
+                        </DropboxCard>
+                      </li>
+                    </ForwardRef>
+                  </ListGroupItem>
+                </ul>
+              </ForwardRef>
+            </ListGroup>
+          </section>
+        </ListContainer>
+      </ArrayConditionalWrapper>
+    </DropboxList>
+    <SlackList
+      id="slack"
+      messages={
+        Array [
+          Object {
+            "author": "jorgelgarcia",
+            "channel": "test-channel",
+            "createdAt": "01/01/2020 - 9:00:00 AM",
+            "message": "This is a test.",
+          },
+        ]
+      }
+    >
+      <ArrayConditionalWrapper
+        array={
+          Array [
+            Object {
+              "author": "jorgelgarcia",
+              "channel": "test-channel",
+              "createdAt": "01/01/2020 - 9:00:00 AM",
+              "message": "This is a test.",
+            },
+          ]
+        }
+      >
+        <ListContainer
+          id="slack"
+        >
+          <section
+            className="py-3"
+            id="slack"
+          >
+            <ListHeading
+              data-testid="list-heading"
+              heading="Slack"
+            >
+              <h1
+                className="font-weight-bold"
+              >
+                Slack
+              </h1>
+            </ListHeading>
+            <ListGroup
+              as="ul"
+            >
+              <ForwardRef
+                as="ul"
+                className="list-group"
+                onSelect={[Function]}
+              >
+                <ul
+                  className="list-group"
+                  onKeyDown={[Function]}
+                >
+                  <ListGroupItem
+                    active={false}
+                    as="li"
+                    disabled={false}
+                    key="0"
+                  >
+                    <ForwardRef
+                      as="li"
+                      className="list-group-item"
+                      disabled={false}
+                      eventKey={null}
+                      onClick={[Function]}
+                    >
+                      <li
+                        className="list-group-item"
+                        data-rb-event-key={null}
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        <SlackCard
+                          author="jorgelgarcia"
+                          channel="test-channel"
+                          createdAt="01/01/2020 - 9:00:00 AM"
+                          message="This is a test."
+                        >
+                          <Card
+                            bg="white"
+                            body={false}
+                            className="shadow calendar-card"
+                          >
+                            <div
+                              className="shadow calendar-card card bg-white"
+                            >
+                              <CardBody>
+                                <div
+                                  className="card-body"
+                                >
+                                  <CardHeading
+                                    data-testid="card-heading"
+                                    heading="jorgelgarcia"
+                                  >
+                                    <h4
+                                      className="font-weight-bold"
+                                    >
+                                      jorgelgarcia
+                                    </h4>
+                                  </CardHeading>
+                                  <CardInfo
+                                    content="test-channel"
+                                    heading="Channel"
+                                    iconSrc="slack-hash.svg"
+                                  >
+                                    <CardIconSubHeading
+                                      heading="Channel"
+                                      iconSrc="slack-hash.svg"
+                                    >
+                                      <div
+                                        className="d-flex justify-content-center align-items-center my-2"
+                                      >
+                                        <Image
+                                          fluid={false}
+                                          rounded={false}
+                                          roundedCircle={false}
+                                          src="slack-hash.svg"
+                                          thumbnail={false}
+                                          width={30}
+                                        >
+                                          <img
+                                            className=""
+                                            src="slack-hash.svg"
+                                            width={30}
+                                          />
+                                        </Image>
+                                        <h5
+                                          className="mb-0 mx-1"
+                                        >
+                                          Channel
+                                        </h5>
+                                      </div>
+                                    </CardIconSubHeading>
+                                    <CardLink
+                                      content="test-channel"
+                                    >
+                                      <p
+                                        className="text-muted mb-0 d-block"
+                                      >
+                                        test-channel
+                                      </p>
+                                    </CardLink>
+                                  </CardInfo>
+                                  <CardInfo
+                                    content="This is a test."
+                                    heading="Message"
+                                    iconSrc="message-circle.svg"
+                                  >
+                                    <CardIconSubHeading
+                                      heading="Message"
+                                      iconSrc="message-circle.svg"
+                                    >
+                                      <div
+                                        className="d-flex justify-content-center align-items-center my-2"
+                                      >
+                                        <Image
+                                          fluid={false}
+                                          rounded={false}
+                                          roundedCircle={false}
+                                          src="message-circle.svg"
+                                          thumbnail={false}
+                                          width={30}
+                                        >
+                                          <img
+                                            className=""
+                                            src="message-circle.svg"
+                                            width={30}
+                                          />
+                                        </Image>
+                                        <h5
+                                          className="mb-0 mx-1"
+                                        >
+                                          Message
+                                        </h5>
+                                      </div>
+                                    </CardIconSubHeading>
+                                    <CardLink
+                                      content="This is a test."
+                                    >
+                                      <p
+                                        className="text-muted mb-0 d-block"
+                                      >
+                                        This is a test.
+                                      </p>
+                                    </CardLink>
+                                  </CardInfo>
+                                </div>
+                              </CardBody>
+                              <CardFooter
+                                className="bg-white"
+                                data-testid="card-footer"
+                              >
+                                <div
+                                  className="bg-white card-footer"
+                                  data-testid="card-footer"
+                                >
+                                  <DateInfo
+                                    date="01/01/2020 - 9:00:00 AM"
+                                    title="Sent"
+                                  >
+                                    <div
+                                      className="text-muted"
+                                    >
+                                      <h5
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        Sent
+                                      </h5>
+                                      <p
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        01/01/2020 - 9:00:00 AM
+                                      </p>
+                                    </div>
+                                  </DateInfo>
+                                </div>
+                              </CardFooter>
+                            </div>
+                          </Card>
+                        </SlackCard>
+                      </li>
+                    </ForwardRef>
+                  </ListGroupItem>
+                </ul>
+              </ForwardRef>
+            </ListGroup>
+          </section>
+        </ListContainer>
+      </ArrayConditionalWrapper>
+    </SlackList>
+    <TweetList
+      id="tweet"
+      tweets={
+        Array [
+          Object {
+            "createdAt": "01/01/2020 - 9:00:00 AM",
+            "message": "This is a test.",
+            "user": "@jorgelgarcia",
+          },
+        ]
+      }
+    >
+      <ArrayConditionalWrapper
+        array={
+          Array [
+            Object {
+              "createdAt": "01/01/2020 - 9:00:00 AM",
+              "message": "This is a test.",
+              "user": "@jorgelgarcia",
+            },
+          ]
+        }
+      >
+        <ListContainer
+          id="tweet"
+        >
+          <section
+            className="py-3"
+            id="tweet"
+          >
+            <ListHeading
+              data-testid="list-heading"
+              heading="Tweets"
+            >
+              <h1
+                className="font-weight-bold"
+              >
+                Tweets
+              </h1>
+            </ListHeading>
+            <ListGroup
+              as="ul"
+            >
+              <ForwardRef
+                as="ul"
+                className="list-group"
+                onSelect={[Function]}
+              >
+                <ul
+                  className="list-group"
+                  onKeyDown={[Function]}
+                >
+                  <ListGroupItem
+                    active={false}
+                    as="li"
+                    disabled={false}
+                    key="0"
+                  >
+                    <ForwardRef
+                      as="li"
+                      className="list-group-item"
+                      disabled={false}
+                      eventKey={null}
+                      onClick={[Function]}
+                    >
+                      <li
+                        className="list-group-item"
+                        data-rb-event-key={null}
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        <TweetCard
+                          createdAt="01/01/2020 - 9:00:00 AM"
+                          message="This is a test."
+                          user="@jorgelgarcia"
+                        >
+                          <Card
+                            bg="white"
+                            body={false}
+                            className="shadow calendar-card"
+                          >
+                            <div
+                              className="shadow calendar-card card bg-white"
+                            >
+                              <CardBody>
+                                <div
+                                  className="card-body"
+                                >
+                                  <CardHeading
+                                    data-testid="card-heading"
+                                    heading="@jorgelgarcia"
+                                  >
+                                    <h4
+                                      className="font-weight-bold"
+                                    >
+                                      @jorgelgarcia
+                                    </h4>
+                                  </CardHeading>
+                                  <CardInfo
+                                    content="This is a test."
+                                    heading="Message"
+                                    iconSrc="twitter.svg"
+                                  >
+                                    <CardIconSubHeading
+                                      heading="Message"
+                                      iconSrc="twitter.svg"
+                                    >
+                                      <div
+                                        className="d-flex justify-content-center align-items-center my-2"
+                                      >
+                                        <Image
+                                          fluid={false}
+                                          rounded={false}
+                                          roundedCircle={false}
+                                          src="twitter.svg"
+                                          thumbnail={false}
+                                          width={30}
+                                        >
+                                          <img
+                                            className=""
+                                            src="twitter.svg"
+                                            width={30}
+                                          />
+                                        </Image>
+                                        <h5
+                                          className="mb-0 mx-1"
+                                        >
+                                          Message
+                                        </h5>
+                                      </div>
+                                    </CardIconSubHeading>
+                                    <CardLink
+                                      content="This is a test."
+                                    >
+                                      <p
+                                        className="text-muted mb-0 d-block"
+                                      >
+                                        This is a test.
+                                      </p>
+                                    </CardLink>
+                                  </CardInfo>
+                                </div>
+                              </CardBody>
+                              <CardFooter
+                                className="bg-white"
+                                data-testid="card-footer"
+                              >
+                                <div
+                                  className="bg-white card-footer"
+                                  data-testid="card-footer"
+                                >
+                                  <DateInfo
+                                    date="01/01/2020 - 9:00:00 AM"
+                                    title="Tweeted"
+                                  >
+                                    <div
+                                      className="text-muted"
+                                    >
+                                      <h5
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        Tweeted
+                                      </h5>
+                                      <p
+                                        className="font-weight-bold mb-0"
+                                      >
+                                        01/01/2020 - 9:00:00 AM
+                                      </p>
+                                    </div>
+                                  </DateInfo>
+                                </div>
+                              </CardFooter>
+                            </div>
+                          </Card>
+                        </TweetCard>
+                      </li>
+                    </ForwardRef>
+                  </ListGroupItem>
+                </ul>
+              </ForwardRef>
+            </ListGroup>
+          </section>
+        </ListContainer>
+      </ArrayConditionalWrapper>
+    </TweetList>
+  </section>
+</SearchResults>
+`;
