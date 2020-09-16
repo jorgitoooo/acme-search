@@ -1,5 +1,8 @@
 import React from "react";
 
+// Utilities
+import utils from "../../utils";
+
 // Icons
 import upArrowIcon from "../../assets/up-arrow.svg";
 
@@ -10,8 +13,10 @@ const ButtonScroll = React.forwardRef(({ active }, ref) => {
     function handleScroll() {
         if (ref) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
+            utils.analytics.clickEvent(`user clicked scroll to top button`);
         }
     }
+    
     return (
         <button 
             className={`btn btn-info shadow scroll-button ${active ? "" : "d-none"}`}  
