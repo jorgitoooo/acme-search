@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchCard: Test visual of component renders correctly 1`] = `
+<Card
+  bg="white"
+  body={false}
+  border="info"
+  className="shadow"
+>
+  <CardBody>
+    <div>
+      Test Child One
+    </div>
+    <p>
+      Test Child Two
+    </p>
+  </CardBody>
+</Card>
+`;
