@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactCard: Test visual components renders correctly 1`] = `
+<ContactCard
+  company="Neeva"
+  emails={
+    Array [
+      "me@jorgegarcia.co",
+    ]
+  }
+  lastContact="01/01/2020 - 4:00:00 PM"
+  name="Jorge L. Garcia"
+  phones={
+    Array [
+      "555-555-5555",
+    ]
+  }
+>
+  <Card
+    bg="white"
+    body={false}
+    className="shadow"
+  >
+    <div
+      className="shadow card bg-white"
+    >
+      <CardBody>
+        <div
+          className="card-body"
+        >
+          <CardHeading
+            data-testid="card-heading"
+            heading="Jorge L. Garcia"
+          >
+            <h4
+              className="font-weight-bold"
+            >
+              Jorge L. Garcia
+            </h4>
+          </CardHeading>
+          <CardSubHeading
+            data-testid="card-subheading"
+            heading="Neeva"
+          >
+            <h5
+              className="text-muted mb-0"
+            >
+              Neeva
+            </h5>
+          </CardSubHeading>
+          <EmailInfo
+            data-testid="email-info"
+            emails={
+              Array [
+                "me@jorgegarcia.co",
+              ]
+            }
+          >
+            <div
+              className="d-sm-inline-block align-baseline-top m-3"
+              data-testid="email-info"
+            >
+              <CardIconSubHeading
+                heading="Email"
+                iconSrc="email.svg"
+              >
+                <div
+                  className="d-flex justify-content-center align-items-center my-2"
+                >
+                  <Image
+                    fluid={false}
+                    rounded={false}
+                    roundedCircle={false}
+                    src="email.svg"
+                    thumbnail={false}
+                    width={30}
+                  >
+                    <img
+                      className=""
+                      src="email.svg"
+                      width={30}
+                    />
+                  </Image>
+                  <h5
+                    className="mb-0 mx-1"
+                  >
+                    Email
+                  </h5>
+                </div>
+              </CardIconSubHeading>
+              <CardLink
+                content="me@jorgegarcia.co"
+                href="mailto:me@jorgegarcia.co"
+                key="0"
+              >
+                <a
+                  className="text-muted mb-0 d-block"
+                  href="mailto:me@jorgegarcia.co"
+                  onClick={[Function]}
+                >
+                  me@jorgegarcia.co
+                </a>
+              </CardLink>
+            </div>
+          </EmailInfo>
+          <PhoneInfo
+            data-testid="phone-info"
+            phones={
+              Array [
+                "555-555-5555",
+              ]
+            }
+          >
+            <div
+              className="d-sm-inline-block align-baseline-top mx-3"
+              data-testid="phone-info"
+            >
+              <CardIconSubHeading
+                heading="Phone"
+                iconSrc="phone.svg"
+              >
+                <div
+                  className="d-flex justify-content-center align-items-center my-2"
+                >
+                  <Image
+                    fluid={false}
+                    rounded={false}
+                    roundedCircle={false}
+                    src="phone.svg"
+                    thumbnail={false}
+                    width={30}
+                  >
+                    <img
+                      className=""
+                      src="phone.svg"
+                      width={30}
+                    />
+                  </Image>
+                  <h5
+                    className="mb-0 mx-1"
+                  >
+                    Phone
+                  </h5>
+                </div>
+              </CardIconSubHeading>
+              <CardLink
+                content="555-555-5555"
+                href="tel:555-555-5555"
+                key="0"
+              >
+                <a
+                  className="text-muted mb-0 d-block"
+                  href="tel:555-555-5555"
+                  onClick={[Function]}
+                >
+                  555-555-5555
+                </a>
+              </CardLink>
+            </div>
+          </PhoneInfo>
+        </div>
+      </CardBody>
+      <CardFooter
+        className="bg-white"
+        data-testid="card-footer"
+      >
+        <div
+          className="bg-white card-footer"
+          data-testid="card-footer"
+        >
+          <DateInfo
+            date="01/01/2020 - 4:00:00 PM"
+            title="Last Contacted"
+          >
+            <div
+              className="text-muted"
+            >
+              <h5
+                className="font-weight-bold mb-0"
+              >
+                Last Contacted
+              </h5>
+              <p
+                className="font-weight-bold mb-0"
+              >
+                01/01/2020 - 4:00:00 PM
+              </p>
+            </div>
+          </DateInfo>
+        </div>
+      </CardFooter>
+    </div>
+  </Card>
+</ContactCard>
+`;

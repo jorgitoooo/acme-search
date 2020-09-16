@@ -14,7 +14,7 @@ function CalendarCard({title, invitees, date, ...props}) {
         <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
                 <CardHeading data-testid="card-heading" heading={title} />
-                { invitees && <GuestsInfo invitees={invitees} />}
+                { invitees && <GuestsInfo data-testid="guest-info" invitees={invitees} />}
             </Card.Body>
             <Card.Footer data-testid="card-footer" className="bg-white">
                 <DateInfo title={"Time & Date"} date={date} />

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarCard: Test visual components renders correctly 1`] = `
+<CalendarCard
+  date="01/01/2020 - 10:00:00 AM"
+  invitees={
+    Array [
+      "Test Guest",
+    ]
+  }
+  title="Calendar Test"
+>
+  <Card
+    bg="white"
+    body={false}
+    className="shadow calendar-card"
+  >
+    <div
+      className="shadow calendar-card card bg-white"
+    >
+      <CardBody>
+        <div
+          className="card-body"
+        >
+          <CardHeading
+            data-testid="card-heading"
+            heading="Calendar Test"
+          >
+            <h4
+              className="font-weight-bold"
+            >
+              Calendar Test
+            </h4>
+          </CardHeading>
+          <GuestsInfo
+            data-testid="guest-info"
+            invitees={
+              Array [
+                "Test Guest",
+              ]
+            }
+          >
+            <div
+              className="d-flex justify-content-center align-items-center my-2"
+            >
+              <Image
+                fluid={false}
+                rounded={false}
+                roundedCircle={false}
+                src="people-outline.svg"
+                thumbnail={false}
+                width={30}
+              >
+                <img
+                  className=""
+                  src="people-outline.svg"
+                  width={30}
+                />
+              </Image>
+              <h5
+                className="mb-0 ml-1"
+              >
+                1
+                 invited
+              </h5>
+            </div>
+            <div
+              className="d-flex flex-wrap justify-content-center"
+            >
+              <Badge
+                className="m-1"
+                key="0"
+                pill={true}
+                variant="info"
+              >
+                <span
+                  className="m-1 badge badge-pill badge-info"
+                >
+                  Test Guest
+                </span>
+              </Badge>
+            </div>
+          </GuestsInfo>
+        </div>
+      </CardBody>
+      <CardFooter
+        className="bg-white"
+        data-testid="card-footer"
+      >
+        <div
+          className="bg-white card-footer"
+          data-testid="card-footer"
+        >
+          <DateInfo
+            date="01/01/2020 - 10:00:00 AM"
+            title="Time & Date"
+          >
+            <div
+              className="text-muted"
+            >
+              <h5
+                className="font-weight-bold mb-0"
+              >
+                Time & Date
+              </h5>
+              <p
+                className="font-weight-bold mb-0"
+              >
+                01/01/2020 - 10:00:00 AM
+              </p>
+            </div>
+          </DateInfo>
+        </div>
+      </CardFooter>
+    </div>
+  </Card>
+</CalendarCard>
+`;
