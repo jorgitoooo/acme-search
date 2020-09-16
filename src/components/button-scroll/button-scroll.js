@@ -1,7 +1,7 @@
 import React from "react";
 
 // Utilities
-import utils from "../../utils";
+import services from "../../services";
 
 // Icons
 import upArrowIcon from "../../assets/up-arrow.svg";
@@ -13,7 +13,7 @@ const ButtonScroll = React.forwardRef(({ active }, ref) => {
     function handleScroll() {
         if (ref) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
-            utils.analytics.clickEvent(`user clicked scroll to top button`);
+            services.analytics.clickEvent(`user clicked scroll to top button`);
         }
     }
     

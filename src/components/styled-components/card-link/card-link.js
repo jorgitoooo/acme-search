@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Utilities
-import utils from "../../../utils";
+import services from "../../../services";
 
 function CardLink( { href, content, ...props } ) {
     function onClick(e) {
@@ -10,7 +10,7 @@ function CardLink( { href, content, ...props } ) {
             e.preventDefault();
         }
         
-        utils.analytics.trackClick(e.target.href);
+        services.analytics.trackClick(e.target.href);
     }
 
     if (href) {

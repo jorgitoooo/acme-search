@@ -1,10 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-// import App from './app';
+import App from './app';
 
-test('renders learn react link', () => {
-  render(<div />);
-//   const { getByText } = render(<App />);
-//   const linkElement = getByText(/learn react/i);
-//   expect(linkElement).not.toBeInTheDocument();
+import { mount } from "enzyme";
+import toJson from 'enzyme-to-json';
+
+describe("App: Test visual of component", () => {
+  it('renders correctly', () => {
+    expect(toJson(mount(<App />))).toMatchSnapshot();
+  });
 });

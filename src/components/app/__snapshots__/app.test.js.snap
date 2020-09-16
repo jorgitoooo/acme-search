@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App: Test visual of component renders correctly 1`] = `
+<App>
+  <main>
+    <SearchCard>
+      <Card
+        bg="white"
+        body={false}
+        border="info"
+        className="shadow"
+      >
+        <div
+          className="shadow card bg-white border-info"
+        >
+          <CardBody>
+            <div
+              className="card-body"
+            >
+              <SearchBar
+                onSearch={[Function]}
+              >
+                <Container
+                  className="p-3 text-center text-dark"
+                  fluid={true}
+                >
+                  <div
+                    className="p-3 text-center text-dark container-fluid"
+                  >
+                    <h1
+                      className="display-4 font-weight-lighter"
+                    >
+                      ACME Search
+                    </h1>
+                    <Form
+                      className="mx-auto d-flex border rounded-pill"
+                      inline={false}
+                      onSubmit={[Function]}
+                    >
+                      <form
+                        className="mx-auto d-flex border rounded-pill"
+                        onSubmit={[Function]}
+                      >
+                        <FormGroup
+                          className="flex-fill mx-3"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="flex-fill mx-3 form-group"
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                          >
+                            <FormControl
+                              className="w-100 border-0"
+                              name="query"
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            >
+                              <input
+                                className="w-100 border-0 form-control"
+                                name="query"
+                                onChange={[Function]}
+                                type="text"
+                                value=""
+                              />
+                            </FormControl>
+                          </div>
+                        </FormGroup>
+                        <Button
+                          active={false}
+                          className="rounded-pill"
+                          disabled={false}
+                          type="submit"
+                          variant="outline-info"
+                        >
+                          <button
+                            className="rounded-pill btn btn-outline-info"
+                            disabled={false}
+                            type="submit"
+                          >
+                            Search
+                          </button>
+                        </Button>
+                      </form>
+                    </Form>
+                  </div>
+                </Container>
+              </SearchBar>
+              <SearchResultsLinks
+                results={null}
+              />
+              <SearchResults
+                results={null}
+              />
+            </div>
+          </CardBody>
+        </div>
+      </Card>
+    </SearchCard>
+    <ForwardRef
+      active={false}
+    >
+      <button
+        className="btn btn-info shadow scroll-button d-none"
+        onClick={[Function]}
+      >
+        <img
+          alt="Up arrow"
+          src="up-arrow.svg"
+        />
+      </button>
+    </ForwardRef>
+  </main>
+</App>
+`;

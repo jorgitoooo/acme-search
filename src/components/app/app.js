@@ -10,9 +10,6 @@ import ButtonScroll from "../button-scroll";
 // Services
 import services from "../../services";
 
-// Utilities
-import utils from "../../utils";
-
 // CSS styles
 import "./app.css";
 
@@ -26,8 +23,8 @@ class App extends React.Component {
     this.onSearch = this.onSearch.bind(this);
     this.ref = React.createRef();
 
-    utils.analytics.init();
-    utils.analytics.externalLibLoadTime();
+    services.analytics.init();
+    services.analytics.externalLibLoadTime();
   }
 
   componentDidMount() {
@@ -44,12 +41,12 @@ class App extends React.Component {
     });
 
     // Tracks the time it takes our app to mount
-    utils.analytics.appMountTime();
+    services.analytics.appMountTime();
   }
 
   componentWillUnmount() {
     // Tracks the time a user has spent on the app
-    utils.analytics.appUsageTime();
+    services.analytics.appUsageTime();
   }
 
   onSearch(query) {

@@ -9,9 +9,6 @@ import Form from "react-bootstrap/Form";
 // Services
 import services from "../../services";
 
-// Utilities
-import utils from "../../utils";
-
 // CSS styles
 import "./search-bar.css";
 
@@ -38,7 +35,7 @@ class SearchBar extends React.Component {
             this.props.onSearch( preppedQuery );
             
             // Tracks form submission
-            utils.analytics.submitEvent("search submit");
+            services.analytics.submitEvent("search submit");
         }
 
         this.setState({ query: "" });

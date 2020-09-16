@@ -1,14 +1,14 @@
 import React from "react";
 
 // Utilities
-import utils from "../../utils";
+import services from "../../services";
 
 // CSS styles
 import "./search-results-links.css";
 
 function SearchResultsLinks({ results }) {
     function trackClick(e) {
-        utils.analytics.clickEvent(`user clicked search result link ${e.target.hash}`);
+        services.analytics.clickEvent(`user clicked search result link ${e.target.hash}`);
     }
 
     if (results) {
