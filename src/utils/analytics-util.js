@@ -3,9 +3,10 @@ import CONSTANTS from "../constants";
 
 class Analytics {
     constructor(debugMode = false) {
-        this.debugMode = typeof(debugMode) === typeof(Boolean())
+        this._debugMode = typeof(debugMode) === typeof(Boolean())
             ? debugMode
             : false;
+        this._testMode = process.env.NODE_ENV === "test";
     }
 
     // Analytics initializer
@@ -13,12 +14,9 @@ class Analytics {
         const gaOptions = {
             name: CONSTANTS.ANALYTICS.TRACKER_NAME,
             titleCase: false,
-            debug: this.debugMode
+            debug: this._debugMode,
+            testMode: this._testMode
         };
-
-        // if (this.debugMode)  {
-        //     gaOptions.debug = true;
-        // }
         
         ReactGA.initialize(CONSTANTS.ANALYTICS.TRACKING_ID, gaOptions);
         ReactGA.pageview(
