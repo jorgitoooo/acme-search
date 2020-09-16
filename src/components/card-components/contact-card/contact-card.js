@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Subcomponents
-import DateInfo from "../../subcomponents/date-info";
-import EmailInfo from "../../subcomponents/email-info";
-import PhoneInfo from "../../subcomponents/phone-info";
+// Info components
+import DateInfo from "../../info-components/date-info";
+import EmailInfo from "../../info-components/email-info";
+import PhoneInfo from "../../info-components/phone-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";

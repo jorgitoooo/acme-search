@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Subcomponents
+// Info components
 import CalendarCard from "../../card-components/calendar-card";
 
 // Styled components

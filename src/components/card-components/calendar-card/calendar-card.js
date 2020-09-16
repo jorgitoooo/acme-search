@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Subcomponents
-import DateInfo from "../../subcomponents/date-info";
-import GuestsInfo from "../../subcomponents/guests-info";
+// Info components
+import DateInfo from "../../info-components/date-info";
+import GuestsInfo from "../../info-components/guests-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";

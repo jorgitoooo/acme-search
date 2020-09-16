@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Subcomponents
-import DateInfo from "../../subcomponents/date-info";
-import PathInfo from "../../subcomponents/path-info";
-import SharedWithInfo from "../../subcomponents/shared-with-info";
+// Info components
+import DateInfo from "../../info-components/date-info";
+import PathInfo from "../../info-components/path-info";
+import SharedWithInfo from "../../info-components/shared-with-info";
 
 // Styled components
 import Card from "react-bootstrap/Card";
