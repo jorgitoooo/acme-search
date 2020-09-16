@@ -24,7 +24,8 @@ class SearchBar extends React.Component {
         }
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
-        this.onHover = this.onHover.bind(this);
+        this.onEnter = this.onEnter.bind(this);
+        this.onLeave = this.onLeave.bind(this);
     }
 
     onFormSubmit(e) {
@@ -47,8 +48,12 @@ class SearchBar extends React.Component {
         this.setState( { [e.target.name]: e.target.value } );
     }
     
-    onHover() {
-        this.setState( prevState => ({ hover: !prevState.hover }) );
+    onEnter() {
+        this.setState({ hover: true });
+    }
+    
+    onLeave() {
+        this.setState({ hover: false });
     }
 
     render() {
@@ -61,8 +66,8 @@ class SearchBar extends React.Component {
                  >
                     <Form.Group
                         className="flex-fill mx-3"
-                        onMouseEnter={this.onHover}
-                        onMouseLeave={this.onHover}
+                        onMouseEnter={this.onEnter}
+                        onMouseLeave={this.onLeave}
                     >
                         <Form.Control
                             className="w-100 border-0"
