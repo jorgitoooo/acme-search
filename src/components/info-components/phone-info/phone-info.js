@@ -14,7 +14,7 @@ function PhoneInfo({ phones, ...props }) {
             <div className="d-sm-inline-block align-baseline-top mx-3" {...props}>
                 <CardIconSubHeading
                     iconSrc={phoneIcon} 
-                    heading={phones.length > 1 ? "Emails" : "Email"} 
+                    heading={phones.length > 1 ? "Phones" : "Phone"} 
                 />
                 {phones.map( (phone, idx) => (
                     <CardLink key={idx} href={`tel:${phone}`} content={phone} />

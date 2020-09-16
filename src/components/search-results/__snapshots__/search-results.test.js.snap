@@ -164,6 +164,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                     </h4>
                                   </CardHeading>
                                   <GuestsInfo
+                                    data-testid="guest-info"
                                     invitees={
                                       Array [
                                         "Test Guest",
@@ -376,6 +377,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                     </h4>
                                   </CardHeading>
                                   <CardSubHeading
+                                    data-testid="card-subheading"
                                     heading="Neeva"
                                   >
                                     <h5
@@ -385,6 +387,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                     </h5>
                                   </CardSubHeading>
                                   <EmailInfo
+                                    data-testid="email-info"
                                     emails={
                                       Array [
                                         "me@jorgegarcia.co",
@@ -393,6 +396,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                   >
                                     <div
                                       className="d-sm-inline-block align-baseline-top m-3"
+                                      data-testid="email-info"
                                     >
                                       <CardIconSubHeading
                                         heading="Email"
@@ -438,6 +442,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                     </div>
                                   </EmailInfo>
                                   <PhoneInfo
+                                    data-testid="phone-info"
                                     phones={
                                       Array [
                                         "555-555-5555",
@@ -446,9 +451,10 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                   >
                                     <div
                                       className="d-sm-inline-block align-baseline-top mx-3"
+                                      data-testid="phone-info"
                                     >
                                       <CardIconSubHeading
-                                        heading="Email"
+                                        heading="Phone"
                                         iconSrc="phone.svg"
                                       >
                                         <div
@@ -471,7 +477,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                           <h5
                                             className="mb-0 mx-1"
                                           >
-                                            Email
+                                            Phone
                                           </h5>
                                         </div>
                                       </CardIconSubHeading>
