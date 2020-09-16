@@ -13,10 +13,12 @@ function CalendarCard({title, invitees, date, ...props}) {
     return (
         <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
-                <CardHeading heading={title} />
+                <CardHeading data-testid="card-heading" heading={title} />
                 { invitees && <GuestsInfo invitees={invitees} />}
             </Card.Body>
-            <Card.Footer className="bg-white"><DateInfo title={"Time & Date"} date={date} /></Card.Footer>
+            <Card.Footer data-testid="card-footer" className="bg-white">
+                <DateInfo title={"Time & Date"} date={date} />
+            </Card.Footer>
         </Card>
     );
 }

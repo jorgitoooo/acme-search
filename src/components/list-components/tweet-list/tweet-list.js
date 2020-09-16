@@ -16,7 +16,7 @@ function TweetList({ tweets, ...props }) {
     return (
         <ArrayConditionalWrapper array={tweets}>
             <ListContainer {...props}>
-                <ListHeading heading={"Tweets"} />
+                <ListHeading data-testid="list-heading" heading={"Tweets"} />
                 <ListGroup as="ul">
                     {tweets.map( (tweet, idx) => (
                             <ListGroup.Item as="li" key={idx}>

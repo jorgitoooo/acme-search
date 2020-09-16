@@ -16,7 +16,7 @@ function CalendarList({ calendar, ...props }) {
     return (
         <ArrayConditionalWrapper array={calendar}>
             <ListContainer {...props}>
-                <ListHeading heading={"Calendar"} />
+                <ListHeading data-testid="list-heading" heading={"Calendar"} />
                 <ListGroup as="ul">
                     {calendar.map( (event, idx) => (
                             <ListGroup.Item as="li" key={idx}>

@@ -16,7 +16,7 @@ function ContactList({ contacts, ...props }) {
     return (
         <ArrayConditionalWrapper array={contacts}>
             <ListContainer {...props}>
-                <ListHeading heading={"Contacts"} />
+                <ListHeading data-testid="list-heading" heading={"Contacts"} />
                 <ListGroup as="ul">
                     {contacts.map( (contact, idx) => (
                             <ListGroup.Item as="li" key={idx}>

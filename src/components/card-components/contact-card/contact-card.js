@@ -24,14 +24,14 @@ function ContactCard({name, company, emails, phones, lastContact, ...props}) {
     return (
         <Card { ...props } className="shadow" bg="white">
             <Card.Body>
-                <CardHeading heading={name} />
+                <CardHeading data-testid="card-heading" heading={name} />
                 {company && <CardSubHeading heading={company} />}
                 {emails && <EmailInfo emails={emails} />}
                 {phones && <PhoneInfo phones={phones} />}
             </Card.Body>
-            <Card.Footer className="bg-white">{lastContact
-                ? <DateInfo title={"Last Contacted"} date={lastContact} />
-                : <p className="text-muted">You have never contacted {name}.</p>}</Card.Footer>
+            <Card.Footer data-testid="card-footer" className="bg-white">
+                <DateInfo title={"Last Contacted"} date={lastContact} />
+            </Card.Footer>
         </Card>
     );
 }

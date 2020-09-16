@@ -12,28 +12,28 @@ import CardHeading from "../../styled-components/card-heading";
 // SVG icons
 import twitterIcon from "../../../assets/twitter.svg";
 
-function SlackCard( { user, message, createdAt, ...props } ) {
+function TweetCard( { user, message, createdAt, ...props } ) {
     return (
         <Card className="shadow calendar-card" bg="white" { ...props }>
             <Card.Body>
-                <CardHeading heading={user} />
+                <CardHeading data-testid="card-heading" heading={user} />
                 <CardInfo 
                     iconSrc={twitterIcon}
                     heading={"Message"}
                     content={message}
                 />
             </Card.Body>
-            <Card.Footer className="bg-white">
-                { <DateInfo title={"Tweeted"} date={createdAt} /> }
+            <Card.Footer data-testid="card-footer" className="bg-white">
+                <DateInfo title={"Tweeted"} date={createdAt} />
             </Card.Footer>
         </Card>
     );
 }
 
-SlackCard.propTypes = {
+TweetCard.propTypes = {
     user: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
 };
 
-export default SlackCard;
+export default TweetCard;

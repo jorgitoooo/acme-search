@@ -16,7 +16,7 @@ function SlackList({ messages, ...props }) {
     return (
         <ArrayConditionalWrapper array={messages}>
             <ListContainer {...props}>
-                <ListHeading heading={"Slack"} />
+                <ListHeading data-testid="list-heading" heading={"Slack"} />
                 <ListGroup as="ul">
                     {messages.map( (message, idx) => (
                             <ListGroup.Item as="li" key={idx}>

@@ -17,7 +17,7 @@ function SlackCard( { channel, author, message, createdAt, ...props } ) {
     return (
         <Card className="shadow calendar-card" bg="white" { ...props }>
             <Card.Body>
-                <CardHeading heading={author} />
+                <CardHeading data-testid="card-heading" heading={author} />
                 <CardInfo 
                     iconSrc={slackHashIcon}
                     heading={"Channel"}
@@ -29,7 +29,7 @@ function SlackCard( { channel, author, message, createdAt, ...props } ) {
                     content={message}
                 />
             </Card.Body>
-            <Card.Footer className="bg-white">
+            <Card.Footer data-testid="card-footer" className="bg-white">
                 <DateInfo title={"Sent"} date={createdAt} />
             </Card.Footer>
         </Card>

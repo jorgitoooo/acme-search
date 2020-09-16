@@ -16,7 +16,7 @@ function DropboxList({ documents, ...props }) {
     return (
         <ArrayConditionalWrapper array={documents}>
             <ListContainer {...props}>
-            <ListHeading heading={"Dropbox"} />
+            <ListHeading data-testid="list-heading" heading={"Dropbox"} />
                 <ListGroup as="ul">
                     {documents.map( (document, idx) => (
                             <ListGroup.Item as="li" key={idx}>

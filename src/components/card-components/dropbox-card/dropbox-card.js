@@ -14,11 +14,13 @@ function DropboxCard({title, path, sharedWith, created, ...props}) {
     return (
         <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
-                <CardHeading heading={title}/>
+                <CardHeading data-testid="card-heading" heading={title}/>
                 <PathInfo path={path} />
                 { sharedWith && <SharedWithInfo emails={sharedWith} />}
             </Card.Body>
-            <Card.Footer className="bg-white"><DateInfo title={"Created"} date={created} /></Card.Footer>
+            <Card.Footer data-testid="card-footer" className="bg-white">
+                <DateInfo title={"Created"} date={created} />
+            </Card.Footer>
         </Card>
     );
 }
