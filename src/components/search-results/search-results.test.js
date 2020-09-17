@@ -31,13 +31,13 @@ const slackMsg = {
     author: "jorgelgarcia",
     message: "This is a test.",
     createdAt: "01/01/2020 - 9:00:00 AM"
-}
+};
 
 const tweetMsg = {
     user: "@jorgelgarcia",
     message: "This is a test.",
     createdAt: "01/01/2020 - 9:00:00 AM"
-}
+};
 
 const props = {
     results: {

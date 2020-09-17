@@ -650,6 +650,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                     </h4>
                                   </CardHeading>
                                   <PathInfo
+                                    data-testid="path-info"
                                     path="/test/path/dropbox.json"
                                   >
                                     <CardIconSubHeading
@@ -691,6 +692,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                     </CardLink>
                                   </PathInfo>
                                   <SharedWithInfo
+                                    data-testid="shared-with-info"
                                     emails={
                                       Array [
                                         "me@jorgegarcia.co",
@@ -890,6 +892,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                   </CardHeading>
                                   <CardInfo
                                     content="test-channel"
+                                    data-testid="card-info"
                                     heading="Channel"
                                     iconSrc="slack-hash.svg"
                                   >
@@ -933,6 +936,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                   </CardInfo>
                                   <CardInfo
                                     content="This is a test."
+                                    data-testid="card-info"
                                     heading="Message"
                                     iconSrc="message-circle.svg"
                                   >
@@ -1118,6 +1122,7 @@ exports[`SearchResults: Test visual of component renders correctly 1`] = `
                                   </CardHeading>
                                   <CardInfo
                                     content="This is a test."
+                                    data-testid="card-info"
                                     heading="Message"
                                     iconSrc="twitter.svg"
                                   >
