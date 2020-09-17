@@ -105,7 +105,9 @@ The second was the addition of search result catagory links that a user can clic
 
 #### Analytics service
 
-The final feature implemented was the analytics service which was an advanced feature option in the requirements for this project. This service is used across the app to track user behaviour, such as time spent on the app, the type of querys submitted, and the links that a user interacts with. The analytics service is also used to track app performance, such as external file load time and app startup time.
+The final feature implemented was the analytics service which was an advanced feature option in the requirements for this project. This service is used across the app to track user behaviour, such as time spent on the app, the type of queries submitted, and the links that a user interacts with. The analytics service is also used to track app performance, such as external file load time and app startup time. 
+
+* NOTE: In development mode, the tracking events that are being fired off can be seen from the browser's terminal.
 
 <br/>
 <hr/>
