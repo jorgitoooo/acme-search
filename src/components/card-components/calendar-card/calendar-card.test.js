@@ -1,5 +1,5 @@
 import React from "react";
-import CalendarCard from "../calendar-card";
+import CalendarCard from "./calendar-card";
 
 import { mount, shallow } from "enzyme";
 import toJson from 'enzyme-to-json';
