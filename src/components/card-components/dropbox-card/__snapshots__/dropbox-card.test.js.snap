@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropboxCard: Test visual components renders correctly 1`] = `
+<DropboxCard
+  created="01/01/2020 - 4:00:00 PM"
+  path="/test/path/dropbox.json"
+  sharedWith={
+    Array [
+      "me@jorgegarcia.co",
+    ]
+  }
+  title="Dropbox Test"
+>
+  <Card
+    bg="white"
+    body={false}
+    className="shadow calendar-card"
+  >
+    <div
+      className="shadow calendar-card card bg-white"
+    >
+      <CardBody>
+        <div
+          className="card-body"
+        >
+          <CardHeading
+            data-testid="card-heading"
+            heading="Dropbox Test"
+          >
+            <h4
+              className="font-weight-bold"
+            >
+              Dropbox Test
+            </h4>
+          </CardHeading>
+          <PathInfo
+            data-testid="path-info"
+            path="/test/path/dropbox.json"
+          >
+            <CardIconSubHeading
+              heading="Path"
+              iconSrc="file.svg"
+            >
+              <div
+                className="d-flex justify-content-center align-items-center my-2"
+              >
+                <Image
+                  fluid={false}
+                  rounded={false}
+                  roundedCircle={false}
+                  src="file.svg"
+                  thumbnail={false}
+                  width={30}
+                >
+                  <img
+                    className=""
+                    src="file.svg"
+                    width={30}
+                  />
+                </Image>
+                <h5
+                  className="mb-0 mx-1"
+                >
+                  Path
+                </h5>
+              </div>
+            </CardIconSubHeading>
+            <CardLink
+              content="/test/path/dropbox.json"
+            >
+              <p
+                className="text-muted mb-0 d-block"
+              >
+                /test/path/dropbox.json
+              </p>
+            </CardLink>
+          </PathInfo>
+          <SharedWithInfo
+            data-testid="shared-with-info"
+            emails={
+              Array [
+                "me@jorgegarcia.co",
+              ]
+            }
+          >
+            <CardIconSubHeading
+              heading="Shared with"
+              iconSrc="people-outline.svg"
+            >
+              <div
+                className="d-flex justify-content-center align-items-center my-2"
+              >
+                <Image
+                  fluid={false}
+                  rounded={false}
+                  roundedCircle={false}
+                  src="people-outline.svg"
+                  thumbnail={false}
+                  width={30}
+                >
+                  <img
+                    className=""
+                    src="people-outline.svg"
+                    width={30}
+                  />
+                </Image>
+                <h5
+                  className="mb-0 mx-1"
+                >
+                  Shared with
+                </h5>
+              </div>
+            </CardIconSubHeading>
+            <div
+              className="d-flex flex-wrap justify-content-center"
+            >
+              <CardLink
+                content="me@jorgegarcia.co"
+                href="mailto:me@jorgegarcia.co"
+                key="0"
+              >
+                <a
+                  className="text-muted mb-0 d-block"
+                  href="mailto:me@jorgegarcia.co"
+                  onClick={[Function]}
+                >
+                  me@jorgegarcia.co
+                </a>
+              </CardLink>
+            </div>
+          </SharedWithInfo>
+        </div>
+      </CardBody>
+      <CardFooter
+        className="bg-white"
+        data-testid="card-footer"
+      >
+        <div
+          className="bg-white card-footer"
+          data-testid="card-footer"
+        >
+          <DateInfo
+            date="01/01/2020 - 4:00:00 PM"
+            title="Created"
+          >
+            <div
+              className="text-muted"
+            >
+              <h5
+                className="font-weight-bold mb-0"
+              >
+                Created
+              </h5>
+              <p
+                className="font-weight-bold mb-0"
+              >
+                01/01/2020 - 4:00:00 PM
+              </p>
+            </div>
+          </DateInfo>
+        </div>
+      </CardFooter>
+    </div>
+  </Card>
+</DropboxCard>
+`;

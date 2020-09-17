@@ -15,8 +15,8 @@ function DropboxCard({title, path, sharedWith, created, ...props}) {
         <Card { ...props } className="shadow calendar-card" bg="white">
             <Card.Body>
                 <CardHeading data-testid="card-heading" heading={title}/>
-                <PathInfo path={path} />
-                { sharedWith && <SharedWithInfo emails={sharedWith} />}
+                <PathInfo data-testid="path-info" path={path} />
+                { sharedWith && <SharedWithInfo data-testid="shared-with-info" emails={sharedWith} />}
             </Card.Body>
             <Card.Footer data-testid="card-footer" className="bg-white">
                 <DateInfo title={"Created"} date={created} />
