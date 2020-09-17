@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlackCard: Test visual components renders correctly 1`] = `
+<SlackCard
+  author="jorgelgarcia"
+  channel="test-channel"
+  createdAt="01/01/2020 - 9:00:00 AM"
+  message="This is a test."
+>
+  <Card
+    bg="white"
+    body={false}
+    className="shadow calendar-card"
+  >
+    <div
+      className="shadow calendar-card card bg-white"
+    >
+      <CardBody>
+        <div
+          className="card-body"
+        >
+          <CardHeading
+            data-testid="card-heading"
+            heading="jorgelgarcia"
+          >
+            <h4
+              className="font-weight-bold"
+            >
+              jorgelgarcia
+            </h4>
+          </CardHeading>
+          <CardInfo
+            content="test-channel"
+            data-testid="card-info"
+            heading="Channel"
+            iconSrc="slack-hash.svg"
+          >
+            <CardIconSubHeading
+              heading="Channel"
+              iconSrc="slack-hash.svg"
+            >
+              <div
+                className="d-flex justify-content-center align-items-center my-2"
+              >
+                <Image
+                  fluid={false}
+                  rounded={false}
+                  roundedCircle={false}
+                  src="slack-hash.svg"
+                  thumbnail={false}
+                  width={30}
+                >
+                  <img
+                    className=""
+                    src="slack-hash.svg"
+                    width={30}
+                  />
+                </Image>
+                <h5
+                  className="mb-0 mx-1"
+                >
+                  Channel
+                </h5>
+              </div>
+            </CardIconSubHeading>
+            <CardLink
+              content="test-channel"
+            >
+              <p
+                className="text-muted mb-0 d-block"
+              >
+                test-channel
+              </p>
+            </CardLink>
+          </CardInfo>
+          <CardInfo
+            content="This is a test."
+            data-testid="card-info"
+            heading="Message"
+            iconSrc="message-circle.svg"
+          >
+            <CardIconSubHeading
+              heading="Message"
+              iconSrc="message-circle.svg"
+            >
+              <div
+                className="d-flex justify-content-center align-items-center my-2"
+              >
+                <Image
+                  fluid={false}
+                  rounded={false}
+                  roundedCircle={false}
+                  src="message-circle.svg"
+                  thumbnail={false}
+                  width={30}
+                >
+                  <img
+                    className=""
+                    src="message-circle.svg"
+                    width={30}
+                  />
+                </Image>
+                <h5
+                  className="mb-0 mx-1"
+                >
+                  Message
+                </h5>
+              </div>
+            </CardIconSubHeading>
+            <CardLink
+              content="This is a test."
+            >
+              <p
+                className="text-muted mb-0 d-block"
+              >
+                This is a test.
+              </p>
+            </CardLink>
+          </CardInfo>
+        </div>
+      </CardBody>
+      <CardFooter
+        className="bg-white"
+        data-testid="card-footer"
+      >
+        <div
+          className="bg-white card-footer"
+          data-testid="card-footer"
+        >
+          <DateInfo
+            date="01/01/2020 - 9:00:00 AM"
+            title="Sent"
+          >
+            <div
+              className="text-muted"
+            >
+              <h5
+                className="font-weight-bold mb-0"
+              >
+                Sent
+              </h5>
+              <p
+                className="font-weight-bold mb-0"
+              >
+                01/01/2020 - 9:00:00 AM
+              </p>
+            </div>
+          </DateInfo>
+        </div>
+      </CardFooter>
+    </div>
+  </Card>
+</SlackCard>
+`;
