@@ -22,14 +22,12 @@ class CalendarService extends Service {
     }
 
     normalize(calendar) {
-        return calendar.map(event => {
-            return {
+        return calendar.map(event => ({
                 id: event.id,
                 title: event.title,
                 invitees: event.invitees.trim().split(",").map(invitee => invitee.trim()),
                 date: utils.date.createDateStr(new Date(event.date)),
-            };
-        });
+            }));
     }
 }
 

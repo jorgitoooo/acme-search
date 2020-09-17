@@ -26,16 +26,14 @@ class ContactService extends Service {
     }
 
     normalize(contacts) {
-        return contacts.map(contact => {
-            return {
+        return contacts.map(contact => ({
                 id: contact.id,
                 name: contact.name,
                 company: contact.company,
                 emails: contact.emails,
                 phones: contact.phones,
                 lastContact: utils.date.createDateStr(new Date(contact.last_contact)),
-            };
-        });
+            }));
     }
 }
 

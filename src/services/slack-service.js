@@ -30,7 +30,7 @@ class SlackService extends Service {
             author: msg.author,
             message: msg.message,
             createdAt: utils.date.createDateStr(new Date(msg.timestamp))
-        }))
+        }));
     }
 }
 

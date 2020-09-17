@@ -25,15 +25,13 @@ class DropboxService extends Service {
     }
 
     normalize(documents) {
-        return documents.map(document => {
-            return {
+        return documents.map(document => ({
                 id: document.id,
                 title: document.title,
                 path: document.path,
                 sharedWith: document.shared_with,
                 created: utils.date.createDateStr(new Date(document.created)),
-            };
-        });
+            }));
     }
 }
 

@@ -8,7 +8,7 @@ class QueryService {
         }
         
         const trimmedLowercaseQuery = queryStr.trim().toLocaleLowerCase();
-        const queryTerms = trimmedLowercaseQuery.split(" ");
+        const queryTerms = trimmedLowercaseQuery.split(" ").filter(term => term !== "");
         
         // Removes any repeating query terms
         const preppedQuery = [...new Set([trimmedLowercaseQuery, ...queryTerms])];

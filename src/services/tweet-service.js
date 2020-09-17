@@ -24,13 +24,11 @@ class TweetService extends Service {
     }
 
     normalize(tweets) {
-        return tweets.map(tweet => {
-            return {
-                user: String(tweet.user).replace("@", ""),
+        return tweets.map(tweet => ({
+                user: String(tweet.user),
                 message: String(tweet.message),
                 createdAt: utils.date.createDateStr(new Date(tweet.timestamp)),
-            };
-        });
+            }));
     }
 }
 
