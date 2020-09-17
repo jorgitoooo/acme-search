@@ -5,7 +5,7 @@
 * [Running The Project](#running-the-project)
 * [Project Design](#project-design)
 * [Additional Features](#additional-features)
-* [Future Improvements](#future-improvements)
+* [Future Work](#future-work)
 
 <br/>
 <hr/>
@@ -111,6 +111,8 @@ The final feature implemented was the analytics service which was an advanced fe
 <hr/>
 <br/>
 
-## Future Improvements
+## Future Work
 
 Assuming that this fictional app continues to grow and become more complex, an improvement that I would implement is creating a global store to maintain app state. Currently our app does not use a state management system, such as Redux. This is fine because the app is small and there aren't any deeply nested components requiring access to the app's state. But, as the app grows, prop drilling could become an issue and a state management system like Redux would be the perfect tool perfect to solve this issue.
+
+Another feature that I would love to implement is pagination. Currently, after every query we get one long list of results. Our dataset is very small but for sufficiently large datasets our users would have to scroll endlessly to see results. Pagination of our results would solve this issue.
