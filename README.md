@@ -1,12 +1,20 @@
 # ACME Search
 
-<br />
+## Table of contents
+
+* <a href="#running-the-project">Running the project</a>
+
+* <a href="#project-design">Project Design</a>
+
+* <a href="#additional-features">Additional Features</a>
+
+* <a href="#future-improvements">Future improvements</a>
+
 <hr />
-<br />
 
-## Running the project
+<h2 id="running-the-project">Running the project</h2>
 
-There are two ways in which this project can be viewed. The first is simply to click this link [https://neeva-acme-search.herokuapp.com](https://neeva-acme-search.herokuapp.com) which takes you to the deployed version of this project (Please keep in mind that you may experience a lag before the app loads since it is running on a heroku free dyno). The second way is to run it locally.
+There are two ways in which this project can be viewed. The first is simply to click this link [https://neeva-acme-search.herokuapp.com](https://neeva-acme-search.herokuapp.com) which takes you to the deployed version of this project (Please keep in mind that you may experience a lag before the app loads since it is running on a free heroku dyno). The second way is to run it locally.
 
 ### Running it locally
 
@@ -14,9 +22,9 @@ There are two ways in which this project can be viewed. The first is simply to c
 
 1. If you are not in the directory that contains this project's `package.json` file please, from your terminal, `cd` into it.
 
-    * `cd /path/to/acme_search`
+    * Ex.) `cd /path/to/acme_search`
 
-2. From this project's directory install all of the dependencies decleared in the `package.json` file by running `npm install`.
+2. From this project's root directory install all of the dependencies decleared in the `package.json` file by running `npm install`.
 
 3. After the installation is complete you can simply run `npm start` which will launch the ACME Search app on your default browser.
 
@@ -28,7 +36,7 @@ There are two ways in which this project can be viewed. The first is simply to c
 <hr/>
 <br/>
 
-## Project Design
+<h2 id="project-design">Project Design</h2>
 
 ### Directory structure
 
@@ -48,12 +56,11 @@ There are two ways in which this project can be viewed. The first is simply to c
 
     * NOTE: Data is currently read from static `.json` files but the services can be easily modified to read the data from a database or some external microservice.
 
-* `./src/utils` contains utility functionality (eg. analytics utility) which is shared across various parts of this project.
+* `./src/utils` contains utility functionality which is shared across various parts of this project.
 
 ### Design decisions
 
 Below I'll talk about some of the design decision I made pertaining to both software and UI/UX.
-
 
 #### Software
 
@@ -61,14 +68,13 @@ I had to make few technological decision when developing this project. The main 
 
 For prop validation, I chose to go with the popular `prop-types` package. This package enforces strict prop type validation and throws errors when these prop requirements aren't met which allows us to catch bugs early on and fix them immediately.
 
-The testing frameworks chosen were, `jest` for unit testing and `enzyme` for end-to-end testing. Both are very popular testing frameworks with a vibrant community behind them, clear documentation. Both frameworks make it incredibly simple to test our applications in a similar way that a user might interact with our app.
+The testing frameworks chosen were, `jest` for unit testing and `enzyme` for end-to-end component testing. Both are very popular testing frameworks with a vibrant community behind them and clear documentation. Both frameworks make it incredibly simple to test applications in a similar way that a user might interact with it.
 
-Finally, when it comes to decisions regarding software design, I chose to implement the separation of concerns design pattern. I separated the presentation layer from the business logic layer. This separation can be seen by looking at the directory structure where I have the `services` handling the business logic while the `components` handles presentation logic. As stated before, the `data` directory holds our static `.json` files which currently serve as our resourse access layer that our `services` interact. However, the resource access layer can be easily swapped within our `services` by making a few modifications to the parent service constructor.
+Finally, when it comes to decisions regarding software design, I chose to implement the separation of concerns design pattern. I separated the presentation layer from the business logic layer. This separation can be seen by looking at the directory structure where I have the `services` handling the business logic while the `components` handle presentation logic. As stated before, the `data` directory holds our static `.json` files which currently serve as our resourse access layer that our `services` interact. However, the resource access layer can be easily swapped within our `services` by making a few modifications to the parent service constructor.
 
 #### UI/UX
 
-Keeping ease of use in mind I decided to avoid creating routes within this application and just displayed all of the information that is relevant to the user in one place. I took into account the fact that there could be many search results after a query so I implemented some navigational assistance, such as buttons that take the user to the results seciont of their interest and a button to take them back to the search bar. The information is displayed in cards. These cards contain a title, a body with all of the relevant information, and a footer which displays chronological information. Icons are used along with subtitles within the body to help visual user better understand the contents of what they're looking at. These informational cards have a consistent UI so as to not confused users.
-
+Keeping ease of use in mind I decided to avoid creating routes within this application and just displayed all of the information that is relevant to the user in one place. I took into account the fact that there could be many search results after a query so I implemented some navigational assistance functionality, such as buttons that take the user to the results section of their interest (such as the calendar section) and a button to take them back to the search bar. All of the information is displayed in cards. These cards contain a title, a body with all of the relevant information, and a footer which displays chronological information. Icons and subtitles are used within the body to help user better understand and more quickly determine the contents of what they're looking at. These informational cards have a consistent UI so as to not confuse users.
 
 Below I've included some of my original card designs for each search category. Designs were created with the AdobeXD software.
 
@@ -86,26 +92,26 @@ Below I've included some of my original card designs for each search category. D
 <hr/>
 <br/>
 
-## Additional Features
+<h2 id="additional-features">Additional Features</h2>
 
 There were a few additional features that I implemented to improve user experience.
 
 #### Scroll to top button
 
-The first was the addition of a button to allow the user to scroll to the top of a page. This is useful because there could be many search results after a given query is executed. If the user has reached the bottom of a page, having to scroll to the top could be tedious and may result in user dissatisfaction.
+The first was the addition of a button to allow the user to scroll to the top of a page. This is useful because there could be many search results after a given query is executed. If the user has reached the bottom of a page, having to scroll to the top could be tedious and may result in user dissatisfaction. A scroll to top button seemed like a crucial feature to improve user experience.
 
 #### Scroll to search result category
 
 The second was the addition of search result catagory links that a user can click and be taken directly to where that catagory lives on the page (eg. "calendar" category links user to the calendar results).
 
-#### Analytics utility
+#### Analytics service
 
-Finally, the last feature implemented was the analytics utility which was an advanced feature option in the requirements. This utility is used across the app to track user behaviour, such as time spent on the app, the type of querys submitted, and the links that a user interacts with. The analytics utility is also used to track app performance, such as external file load time and app startup time.
+The final feature implemented was the analytics service which was an advanced feature option in the requirements for this project. This service is used across the app to track user behaviour, such as time spent on the app, the type of querys submitted, and the links that a user interacts with. The analytics service is also used to track app performance, such as external file load time and app startup time.
 
 <br/>
 <hr/>
 <br/>
 
-## Future improvements
+<h2 id="future-improvements">Future improvements</h2>
 
-Assuming that this fictional app continues to grow and become more complex, an improvement that I would implement is creating a global store to maintain app state. Currently our app does not use any state management system, such as Redux. This is fine because the app is small and there aren't any deeply nested components requiring access app state. But, as the app grows, prop drilling could become an issue and a state management system like redux would be perfect to solve this issue.
+Assuming that this fictional app continues to grow and become more complex, an improvement that I would implement is creating a global store to maintain app state. Currently our app does not use a state management system, such as Redux. This is fine because the app is small and there aren't any deeply nested components requiring access to the app's state. But, as the app grows, prop drilling could become an issue and a state management system like Redux would be the perfect tool perfect to solve this issue.
