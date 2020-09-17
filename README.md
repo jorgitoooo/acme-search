@@ -25,7 +25,7 @@ There are two ways in which this project can be viewed. The first is simply to c
 
 2. From this project's root directory install all of the dependencies decleared in the `package.json` file by running `npm install`.
 
-3. After the installation is complete you can simply run `npm start` which will launch the ACME Search app on your default browser.
+3. After the installation is complete you can simply run `npm start` which will launch the ACME Search app on your default browser. If for some reason `npm start` does not automatically launch your default browser, you can just click [http://localhost:3000/](http://localhost:3000/) or type it into your preferred browser's address bar to see the web app.
 
     * NOTE: Please be sure that you are not running any other programs on port **3000** prior to running `npm start`.
 
