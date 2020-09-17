@@ -87,6 +87,13 @@ class Analytics {
         });
     }
 
+    queryEvent(query) {
+        ReactGA.event({
+            category: "query",
+            action: query || "user query"
+        })
+    }
+
     trackClick(href) {
         if (typeof(href) !== typeof(String())) return;
         

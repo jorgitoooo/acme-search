@@ -34,9 +34,12 @@ class SearchBar extends React.Component {
         if (preppedQuery) {
             this.props.onSearch( preppedQuery );
             
-            // Tracks form submission
-            services.analytics.submitEvent("search submit");
+            // Tracks user query
+            services.analytics.queryEvent(preppedQuery[0]);
         }
+
+        // Tracks form submission
+        services.analytics.submitEvent("search submit");
 
         this.setState({ query: "" });
     }
