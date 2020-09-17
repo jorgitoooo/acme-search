@@ -18,6 +18,7 @@ function TweetCard( { user, message, createdAt, ...props } ) {
             <Card.Body>
                 <CardHeading data-testid="card-heading" heading={user} />
                 <CardInfo 
+                    data-testid="card-info"
                     iconSrc={twitterIcon}
                     heading={"Message"}
                     content={message}

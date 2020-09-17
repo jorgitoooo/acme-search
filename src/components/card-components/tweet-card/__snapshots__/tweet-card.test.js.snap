@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TweetCard: Test visual components renders correctly 1`] = `
+<TweetCard
+  createdAt="01/01/2020 - 9:00:00 AM"
+  message="This is a test."
+  user="@jorgelgarcia"
+>
+  <Card
+    bg="white"
+    body={false}
+    className="shadow calendar-card"
+  >
+    <div
+      className="shadow calendar-card card bg-white"
+    >
+      <CardBody>
+        <div
+          className="card-body"
+        >
+          <CardHeading
+            data-testid="card-heading"
+            heading="@jorgelgarcia"
+          >
+            <h4
+              className="font-weight-bold"
+            >
+              @jorgelgarcia
+            </h4>
+          </CardHeading>
+          <CardInfo
+            content="This is a test."
+            data-testid="card-info"
+            heading="Message"
+            iconSrc="twitter.svg"
+          >
+            <CardIconSubHeading
+              heading="Message"
+              iconSrc="twitter.svg"
+            >
+              <div
+                className="d-flex justify-content-center align-items-center my-2"
+              >
+                <Image
+                  fluid={false}
+                  rounded={false}
+                  roundedCircle={false}
+                  src="twitter.svg"
+                  thumbnail={false}
+                  width={30}
+                >
+                  <img
+                    className=""
+                    src="twitter.svg"
+                    width={30}
+                  />
+                </Image>
+                <h5
+                  className="mb-0 mx-1"
+                >
+                  Message
+                </h5>
+              </div>
+            </CardIconSubHeading>
+            <CardLink
+              content="This is a test."
+            >
+              <p
+                className="text-muted mb-0 d-block"
+              >
+                This is a test.
+              </p>
+            </CardLink>
+          </CardInfo>
+        </div>
+      </CardBody>
+      <CardFooter
+        className="bg-white"
+        data-testid="card-footer"
+      >
+        <div
+          className="bg-white card-footer"
+          data-testid="card-footer"
+        >
+          <DateInfo
+            date="01/01/2020 - 9:00:00 AM"
+            title="Tweeted"
+          >
+            <div
+              className="text-muted"
+            >
+              <h5
+                className="font-weight-bold mb-0"
+              >
+                Tweeted
+              </h5>
+              <p
+                className="font-weight-bold mb-0"
+              >
+                01/01/2020 - 9:00:00 AM
+              </p>
+            </div>
+          </DateInfo>
+        </div>
+      </CardFooter>
+    </div>
+  </Card>
+</TweetCard>
+`;
