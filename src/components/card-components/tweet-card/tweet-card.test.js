@@ -60,40 +60,4 @@ describe("TweetCard: Test prop type validation", () => {
         // to card-link which also requires it.
         expect(consoleErrorSpy).toHaveBeenCalledTimes(7);
     });
-
-    // it("throws an error when user prop is not of type `string`", () => {
-    //     const { message, createdAt } = props;
-    //     mount(<TweetCard user={1} message={message} createdAt={createdAt} />);
-    //     expect(consoleErrorSpy).toHaveBeenCalledTimes(2);
-    // });
-
-    // it("throws an error when message prop is not of type `string`", () => {
-    //     const { user, createdAt } = props;
-    //     mount(<TweetCard user={user} message={1} createdAt={createdAt} />);
-    //     expect(consoleErrorSpy).toHaveBeenCalledTimes(3);
-    // });
-
-    // it("throws an error when createdAt prop is not of type `string`", () => {
-    //     const { user, message } = props;
-    //     mount(<TweetCard user={user} message={message} createdAt={1} />);
-    //     expect(consoleErrorSpy).toHaveBeenCalledTimes(2);
-    // });
-
-    // it("throws an error when user prop is not provided", () => {
-    //     const { message, createdAt } = props;
-    //     mount(<TweetCard message={message} createdAt={createdAt} />);
-    //     expect(consoleErrorSpy).toHaveBeenCalledTimes(2);
-    // });
-
-    // it("throws an error when message prop is not provided", () => {
-    //     const { user, createdAt } = props;
-    //     mount(<TweetCard user={user} createdAt={createdAt} />);
-    //     expect(consoleErrorSpy).toHaveBeenCalledTimes(3);
-    // });
-
-    // it("throws an error when createdAt prop is not provided", () => {
-    //     const { user, message } = props;
-    //     mount(<TweetCard user={user} message={message} />);
-    //     expect(consoleErrorSpy).toHaveBeenCalledTimes(2);
-    // });
 });
