@@ -7,7 +7,9 @@
 * [Additional Features](#additional-features)
 * [Future Improvements](#future-improvements)
 
-<hr />
+<br/>
+<hr/>
+<br/>
 
 ## Running The Project
 
