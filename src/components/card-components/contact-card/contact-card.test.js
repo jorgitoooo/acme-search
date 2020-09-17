@@ -1,5 +1,5 @@
 import React from "react";
-import ContactCard from "../contact-card";
+import ContactCard from "./contact-card";
 
 import { mount, shallow } from "enzyme";
 import toJson from 'enzyme-to-json';
