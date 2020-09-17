@@ -1,18 +1,15 @@
 # ACME Search
 
-## Table of contents
+## Table of Contents
 
-* <a href="#running-the-project">Running the project</a>
-
-* <a href="#project-design">Project Design</a>
-
-* <a href="#additional-features">Additional Features</a>
-
-* <a href="#future-improvements">Future improvements</a>
+* [Running The Project](#running-the-project)
+* [Project Design](#project-design)
+* [Additional Features](#additional-features)
+* [Future Improvements](#future-improvements)
 
 <hr />
 
-<h2 id="running-the-project">Running the project</h2>
+## Running The Project
 
 There are two ways in which this project can be viewed. The first is simply to click this link [https://neeva-acme-search.herokuapp.com](https://neeva-acme-search.herokuapp.com) which takes you to the deployed version of this project (Please keep in mind that you may experience a lag before the app loads since it is running on a free heroku dyno). The second way is to run it locally.
 
@@ -36,7 +33,7 @@ There are two ways in which this project can be viewed. The first is simply to c
 <hr/>
 <br/>
 
-<h2 id="project-design">Project Design</h2>
+## Project Design
 
 ### Directory structure
 
@@ -92,7 +89,7 @@ Below I've included some of my original card designs for each search category. D
 <hr/>
 <br/>
 
-<h2 id="additional-features">Additional Features</h2>
+## Additional Features
 
 There were a few additional features that I implemented to improve user experience.
 
@@ -112,6 +109,6 @@ The final feature implemented was the analytics service which was an advanced fe
 <hr/>
 <br/>
 
-<h2 id="future-improvements">Future improvements</h2>
+## Future Improvements
 
 Assuming that this fictional app continues to grow and become more complex, an improvement that I would implement is creating a global store to maintain app state. Currently our app does not use a state management system, such as Redux. This is fine because the app is small and there aren't any deeply nested components requiring access to the app's state. But, as the app grows, prop drilling could become an issue and a state management system like Redux would be the perfect tool perfect to solve this issue.
