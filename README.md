@@ -1,4 +1,4 @@
-# ACME Search
+<h1 align="center">ACME Search</h1>
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@
 
 ## Running The Project
 
-There are two ways in which this project can be viewed. The first is simply to click this link [https://neeva-acme-search.herokuapp.com](https://neeva-acme-search.herokuapp.com) which takes you to the deployed version of this project (Please keep in mind that you may experience a lag before the app loads since it is running on a free heroku dyno). The second way is to run it locally.
+There are two ways in which this project can be viewed. The first is simply to click this link [https://acme-search-app.herokuapp.com](https://acme-search-app.herokuapp.com) which takes you to the deployed version of this project (Please keep in mind that you may experience a lag before the app loads since it is running on a free heroku dyno). The second way is to run it locally.
 
 ### Running it locally
 
@@ -27,6 +27,8 @@ There are two ways in which this project can be viewed. The first is simply to c
 
 3. After the installation is complete you can simply run `npm start` which will launch the ACME Search app on your default browser. If for some reason `npm start` does not automatically launch your default browser, you can just click [http://localhost:3000/](http://localhost:3000/) or type it into your preferred browser's address bar to see the web app.
 
+    * Sample query to try: `acme john`
+    
     * NOTE: Please be sure that you are not running any other programs on port **3000** prior to running `npm start`.
 
 4. If you'd like to run the tests written for this app you may open up a new terminal tab or terminate our running app and from the same terminal tab run `npm test`.
@@ -77,15 +79,15 @@ Keeping ease of use in mind I decided to avoid creating routes within this appli
 
 Below I've included some of my original card designs for each search category. Designs were created with the AdobeXD software.
 
-![Calendar card design](./design/calendar-asset.png)
+<p align="center"><img src="./design/calendar-asset.png" alt="Calendar card design" /></p>
 
-![Contact card design](./design/contact-asset.png)
+<p align="center"><img src="./design/contact-asset.png" alt="Contact card design" /></p>
 
-![Dropbox card design](./design/dropbox-asset.png)
+<p align="center"><img src="./design/dropbox-asset.png" alt="Dropbox card design" /></p>
 
-![Slack card design](./design/slack-asset.png)
+<p align="center"><img src="./design/slack-asset.png" alt="Slack card design" /></p>
 
-![Tweet card design](./design/tweet-asset.png)
+<p align="center"><img src="./design/tweet-asset.png" alt="Tweet card design" /></p>
 
 <br/>
 <hr/>
