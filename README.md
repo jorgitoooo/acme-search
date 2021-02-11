@@ -21,7 +21,7 @@ There are two ways in which this project can be viewed. The first is simply to c
 
 1. If you are not in the directory that contains this project's `package.json` file please, from your terminal, `cd` into it.
 
-    * Ex.) `cd /path/to/acme_search`
+    * Ex.) `cd /path/to/acme-search`
 
 2. From this project's root directory install all of the dependencies decleared in the `package.json` file by running `npm install`.
 
@@ -65,7 +65,7 @@ Below I'll talk about some of the design decision I made pertaining to both soft
 
 #### Software
 
-I had to make few technological decision when developing this project. The main one was choosing the frontend library that this project was built on. I chose React not only because it is heavily used at Neeva but also because it makes componentizing our view/presentation logic incredibly simple which translates into greater reusability of our code and faster development time.
+I had to make few technological decision when developing this project. The main one was choosing the frontend library that this project was built on. I chose React because it makes componentizing our view/presentation logic incredibly simple which translates into greater reusability of our code and faster development time.
 
 For prop validation, I chose to go with the popular `prop-types` package. This package enforces strict prop type validation and throws errors when these prop requirements aren't met which allows us to catch bugs early on and fix them immediately.
 
@@ -107,7 +107,7 @@ The second was the addition of search result catagory links that a user can clic
 
 #### Analytics service
 
-The final feature implemented was the analytics service which was an advanced feature option in the requirements for this project. This service is used across the app to track user behaviour, such as time spent on the app, the type of queries submitted, and the links that a user interacts with. The analytics service is also used to track app performance, such as external file load time and app startup time. 
+The final feature implemented was the analytics service. This service is used across the app to track user behaviour, such as time spent on the app, the type of queries submitted, and the links that a user interacts with. The analytics service is also used to track app performance, such as external file load time and app startup time. 
 
 * NOTE: In development mode, the tracking events that are being fired off can be seen from the browser's terminal.
 
@@ -117,6 +117,6 @@ The final feature implemented was the analytics service which was an advanced fe
 
 ## Future Work
 
-Assuming that this fictional app continues to grow and become more complex, an improvement that I would implement is creating a global store to maintain app state. Currently our app does not use a state management system, such as Redux. This is fine because the app is small and there aren't any deeply nested components requiring access to the app's state. But, as the app grows, prop drilling could become an issue and a state management system like Redux would be the perfect tool perfect to solve this issue.
+Assuming that this fictional app continues to grow and become more complex, an improvement that I would implement is creating a global store to maintain app state. Currently our app does not use a state management system, such as Redux. This is fine because the app is small and there aren't any deeply nested components requiring access to the app's state. But, as the app grows, prop drilling could become an issue and a state management system like Redux would be the perfect tool to solve this issue.
 
 Another feature that I would love to implement is pagination. Currently, after every query we get one long list of results. Our dataset is very small but for sufficiently large datasets our users would have to scroll endlessly to see results. Pagination of our results would solve this issue.
